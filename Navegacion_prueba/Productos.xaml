@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="FoodDeliveryApp.Productos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FoodDeliveryApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:data ="using:FoodDeliveryApp.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:DataType="data:ProductosApp" x:Key="DatosProductosTemplate">
+            <StackPanel HorizontalAlignment="Center">
+                <Image Width="250" Source="{x:Bind imagenProducto}" />
+                <TextBlock FontSize="16" Text="{x:Bind Nombre}" HorizontalAlignment="Center" />
+                <TextBlock FontSize="10" Text="{x:Bind Descripcion}" HorizontalAlignment="Center" />
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Background="#FFDBDBDB" Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <GridView ItemsSource="{x:Bind pApp}" ItemTemplate="{StaticResource DatosProductosTemplate}">
+            
+            
+        </GridView>
+        
+        
+    </Grid>
+
+</Page>

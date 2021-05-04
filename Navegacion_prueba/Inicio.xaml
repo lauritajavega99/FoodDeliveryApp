@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="FoodDeliveryApp.Inicio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FoodDeliveryApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White" FocusVisualPrimaryBrush="#FFE4D5D5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="349*"/>
+            <ColumnDefinition Width="699*"/>
+            <ColumnDefinition Width="292*"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="63*"/>
+            <RowDefinition Height="325*"/>
+            <RowDefinition Height="112*"/>
+        </Grid.RowDefinitions>
+        <FlipView x:Name="fVslider" MaxWidth="400" Margin="0,0,0,0" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Width="500" Height="220" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <Image Source="/Assets/banner1.png" AutomationProperties.Name="Cliff" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="400"/>
+            <Image Source="/Assets/banner2.png" AutomationProperties.Name="Grapes" Stretch="UniformToFill"/>
+            <Image Source="/Assets/banner3.png" AutomationProperties.Name="Rainier" Stretch="UniformToFill"/>
+        </FlipView>
+
+        <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta" />
+        <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="4" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="80" HorizontalAlignment="Stretch" />
+
+        <Button x:Name="btnCarta" Grid.Row="2" Grid.Column="0" Content="Carta productos" HorizontalAlignment="Right" Margin="0,4,4,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" FocusVisualPrimaryBrush="#FFC63848" Background="#FFC63848" Click="ClickbtnProductos" />
+        <Button x:Name="btnMenus" Grid.Row="2" Grid.Column="1" Content="Menús" HorizontalAlignment="Center" Margin="0,4,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnMenus" />
+        <Button x:Name="btnOfertas" Grid.Row="2" Grid.Column="2" Content="Ofertas destacadas" Margin="4,4,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnOfertas" />
+
+        <Viewbox x:Name="vbBienvenido" Grid.Row="0" Grid.Column="1" Width="300">
+            <TextBlock x:Name="txtBienvenido" Text="¡Bienvenidos!" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+        </Viewbox>
+
+    </Grid>
+</Page>

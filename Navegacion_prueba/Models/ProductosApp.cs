@@ -83,5 +83,19 @@ namespace FoodDeliveryApp.Models
 
             return productosApp;
         }
+
+        public static List<ProductosApp> GetMenus()
+        {
+            var productosApp = new List<ProductosApp>();
+
+            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", Descripcion ="Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
+            productosApp.Add(new ProductosApp { Nombre = "Pizzas", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
+            productosApp.Add(new ProductosApp { Nombre = "Entrantes", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
+            productosApp.Add(new ProductosApp { Nombre = "Postres", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
+            productosApp.Add(new ProductosApp { Nombre = "Entrantes", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
+            productosApp.Add(new ProductosApp { Nombre = "Postres", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
+
+            return productosApp;
+        }
     }
 }

@@ -51,6 +51,11 @@ namespace FoodDeliveryApp
 
             txtTotal.Text = "Total: " + total + " euros.";
         }
+
+        private void irAboutUS(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SobreNosotros));
+        }
     }
 
     

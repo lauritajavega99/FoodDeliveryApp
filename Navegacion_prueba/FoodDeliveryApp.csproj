@@ -125,6 +125,12 @@
     <Compile Include="Contacto.xaml.cs">
       <DependentUpon>Contacto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entrantes.xaml.cs">
+      <DependentUpon>Entrantes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hamburguesas.xaml.cs">
+      <DependentUpon>Hamburguesas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
@@ -138,7 +144,13 @@
     <Compile Include="Ofertas.xaml.cs">
       <DependentUpon>Ofertas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Producto.cs" />
+    <Compile Include="Pizzas.xaml.cs">
+      <DependentUpon>Pizzas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Postres.xaml.cs">
+      <DependentUpon>Postres.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Producto.cs" />
     <Compile Include="Productos.xaml.cs">
       <DependentUpon>Productos.xaml</DependentUpon>
     </Compile>
@@ -160,6 +172,7 @@
     <Content Include="Assets\buscar.png" />
     <Content Include="Assets\carro.png" />
     <Content Include="Assets\contacto.png" />
+    <Content Include="Assets\entrantes.png" />
     <Content Include="Assets\hamburguesa1.png" />
     <Content Include="Assets\hamburguesa2.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
@@ -170,6 +183,8 @@
     <Content Include="Assets\logoApp.png" />
     <Content Include="Assets\menus.png" />
     <Content Include="Assets\ofertas.png" />
+    <Content Include="Assets\pizzas.png" />
+    <Content Include="Assets\postres.png" />
     <Content Include="Assets\productos.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
@@ -232,6 +247,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Entrantes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Hamburguesas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Inicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -245,6 +268,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ofertas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pizzas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Postres.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using FoodDeliveryApp.Models;
+using Navegacion_prueba;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,7 +29,39 @@ namespace FoodDeliveryApp
         public Productos()
         {
             this.InitializeComponent();
-            pApp = GestionProducto.GetProductos();
+            pApp = GestionProducto.GetTiposProductos();
+        }
+
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var product = (ProductosApp)e.ClickedItem;
+
+            switch (product.Nombre)
+            {
+                case "Hamburguesas":
+                    this.Frame.Navigate(typeof(Hamburguesas));
+                    break;
+                case "Pizzas":
+                    this.Frame.Navigate(typeof(Pizzas));
+                    break;
+                case "Entrantes":
+                    this.Frame.Navigate(typeof(Entrantes));
+                    break;
+                case "Postres":
+                    this.Frame.Navigate(typeof(Postres));
+                    break;
+            }
+
+        }
+
+        private void irAboutUs1(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SobreNosotros));
+        }
+
+        private void irCesta1(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CestaCompra));
         }
     }
 }

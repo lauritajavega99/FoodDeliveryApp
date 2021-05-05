@@ -6,9 +6,45 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data ="using:FoodDeliveryApp.Models"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:DataType="data:ProductosApp" x:Key="DatosProductosTemplate">
+            <StackPanel x:Name="spProducto" Orientation="Horizontal" HorizontalAlignment="Left" Padding="0,0,0,5" Margin="10,0,10,0">
+                <Image Width="210" Margin="5" Source="{x:Bind imagenProducto}" />
+                <StackPanel Margin="10,10,0,0">
+                    <TextBlock FontSize="16" Text="{x:Bind Nombre}" HorizontalAlignment="Left"/>
+                    <TextBlock FontSize="10" Text="{x:Bind Descripcion}" HorizontalAlignment="Left" />
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
-    <Grid Background="White">
-        <TextBlock x:Name="txtBienvenido" Text="Menús" FontSize="24" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+    <Grid Background="White" Width="Auto" Height="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="720*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="365*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+
+        <GridView Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" ItemsSource="{x:Bind pApp}" ItemTemplate="{StaticResource DatosProductosTemplate}">
+
+        </GridView>
+
+        <Viewbox x:Name="vbMenus" Grid.Row="0" Grid.Column="1" Width="300">
+            <TextBlock x:Name="txtMenus" Text="Carta de Menús" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+        </Viewbox>
+
+        <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta5" />
+        <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irAboutUs5" Width="100" />
+
     </Grid>
 </Page>

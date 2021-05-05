@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FoodDeliveryApp.Models;
+using FoodDeliveryApp;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +24,22 @@ namespace FoodDeliveryApp
     /// </summary>
     public sealed partial class Menus : Page
     {
+        private List<ProductosApp> pApp;
+
         public Menus()
         {
             this.InitializeComponent();
+            pApp = GestionProducto.GetMenus();
+        }
+
+        private void irCesta5(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CestaCompra));
+        }
+
+        private void irAboutUs5(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SobreNosotros));
         }
     }
 }

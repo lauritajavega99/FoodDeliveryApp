@@ -144,6 +144,9 @@
     <Compile Include="Ofertas.xaml.cs">
       <DependentUpon>Ofertas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PaginaDetalle.xaml.cs">
+      <DependentUpon>PaginaDetalle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pizzas.xaml.cs">
       <DependentUpon>Pizzas.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SobreNosotros.xaml.cs">
       <DependentUpon>SobreNosotros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl.xaml.cs">
+      <DependentUpon>UserControl.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +277,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PaginaDetalle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pizzas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -284,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SobreNosotros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

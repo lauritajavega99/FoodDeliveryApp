@@ -41,5 +41,10 @@ namespace Navegacion_prueba
         {
             this.Frame.Navigate(typeof(SobreNosotros));
         }
+
+        private void spProducto_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PaginaDetalle));
+        }
     }
 }

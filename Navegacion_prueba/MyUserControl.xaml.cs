@@ -17,9 +17,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Navegacion_prueba
 {
-    public sealed partial class UserControl : UserControl
+    public sealed partial class MyUserControl : UserControl
     {
-        public UserControl()
+        public MyUserControl()
         {
             this.InitializeComponent();
         }

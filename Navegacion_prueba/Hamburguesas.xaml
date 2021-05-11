@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
         <DataTemplate x:DataType="data:ProductosApp" x:Key="DatosProductosTemplate">
-            <StackPanel x:Name="spProducto" HorizontalAlignment="Center" Padding="0,0,0,5" Margin="17,0,17,0">
+            <StackPanel x:Name="spProducto" HorizontalAlignment="Center" Padding="0,0,0,5" Margin="17,0,17,0" PointerPressed="spProducto_PointerPressed">
                 <Image Width="210" Margin="15,10,15,0" Source="{x:Bind imagenProducto}" />
                 <TextBlock FontSize="16" Text="{x:Bind Nombre}" HorizontalAlignment="Center" />
                 <TextBlock FontSize="10" Text="{x:Bind Descripcion}" HorizontalAlignment="Center" />

@@ -32,6 +32,7 @@ namespace FoodDeliveryApp
             this.InitializeComponent();
             Productos = ValoresEjemplo.GetValores();
             sumaPrecio(Productos);
+
         }
 
         private void irCesta1(object sender, PointerRoutedEventArgs e)
@@ -55,6 +56,32 @@ namespace FoodDeliveryApp
         private void irAboutUS(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SobreNosotros));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            dgProductos.ItemsSource = null;
+
+        }
+
+        private void Pagar(object sender, RoutedEventArgs e)
+        {
+            DisplayNoWifiDialog();
+        }
+
+        private async void DisplayNoWifiDialog()
+        {
+            ContentDialog noWifiDialog = new ContentDialog
+            {
+                Title = "Pago realizado",
+                Content = "¡Su compra ha sido realizada con éxito!",
+                CloseButtonText = "Ok"
+            };
+
+            ContentDialogResult result = await noWifiDialog.ShowAsync();
+
+            dgProductos.ItemsSource = null;
+
         }
     }
 

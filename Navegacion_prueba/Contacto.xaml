@@ -1,14 +1,91 @@
 ﻿<Page
-    x:Class="FoodDeliveryApp.Contacto"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FoodDeliveryApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Custom="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="FoodDeliveryApp.Contacto"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
-        <TextBlock x:Name="txtBienvenido" Text="Contacto" FontSize="24" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="720*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="365*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <Viewbox x:Name="vbContacto" Grid.Row="0" Grid.Column="1" Width="300">
+            <TextBlock x:Name="txtContacto" Text="Contacto" FontSize="11" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+        </Viewbox>
+
+        <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta7" />
+        <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irAboutUs7" Width="100" />
+
+        <Grid x:Name="gridMapa" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Background="#CCBB4C4C">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="117.333"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="900*"/>
+            </Grid.ColumnDefinitions>
+
+            <Custom:MapControl
+           x:Name="MapControl1"            
+           ZoomInteractionMode="GestureAndControl"
+           TiltInteractionMode="GestureAndControl"   
+           MapServiceToken="ZMJCG4JMsRD9YlNn3qSe~TpdWRXc290q1m32AMqrapg~AgjpceRADO99X3LOsAT9Wsz2FnTc62DdiDquM_TxLLFPi05uwfqWgigaTPmRsEEx" Grid.Column="1" Grid.RowSpan="6"/>
+
+            <Border Background="White" Margin="0,80,0,0" Height="50" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0">
+                <Viewbox x:Name="vbPregunta1" Grid.Row="0" Grid.Column="0" Width="200" Height="100" VerticalAlignment="Bottom" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}">
+                    <TextBlock x:Name="txtPregunta1" Text="¿Dónde nos encontramos?" FontSize="14" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB" Foreground="Black" SelectionHighlightColor="{x:Null}" FocusVisualSecondaryBrush="#99FFFFFF"/>
+                </Viewbox>
+            </Border>
+
+            <Viewbox x:Name="vbRespuesta1" Grid.Row="1" Grid.Column="0" Height="100" VerticalAlignment="Top" Margin="50,0,50,0">
+                <TextBlock x:Name="txtRespuesta1" Text="Texto texto texto texto texto texto" FontSize="9" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+            </Viewbox>
+
+            <Border Background="White" Margin="0,80,0,0" Height="50" VerticalAlignment="Top" Grid.Row="2" Grid.Column="0">
+                <Viewbox x:Name="vbPregunta2" Grid.Row="2" Grid.Column="0" Width="200" Height="100" VerticalAlignment="Bottom">
+                    <TextBlock x:Name="txtPregunta2" Text="¿Cuál es nuestro propósito?" FontSize="14" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+                </Viewbox>
+            </Border>
+
+            <Viewbox x:Name="vbRespuesta2" Grid.Row="3" Grid.Column="0" Height="100" VerticalAlignment="Top" Margin="50,0,50,0">
+                <TextBlock x:Name="txtRespuesta2" Text="Texto texto texto texto texto texto" FontSize="9" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Top"/>
+            </Viewbox>
+
+
+            <Border Background="White" Margin="0,81,0,0" Height="50" VerticalAlignment="Top" Grid.Row="4" Grid.Column="0" Grid.RowSpan="2">
+                <Viewbox x:Name="vbPregunta3" Grid.Row="4" Grid.Column="0" Width="200" Height="100" VerticalAlignment="Bottom">
+                    <TextBlock x:Name="txtPregunta3" Text="¿Alcance y envíos?" FontSize="14" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Stretch"/>
+                </Viewbox>
+            </Border>
+
+            <Viewbox x:Name="vbRespuesta3" Grid.Row="5" Grid.Column="0" Height="100" VerticalAlignment="Top" Margin="50,14,50,0">
+                <TextBlock x:Name="txtRespuesta3" Text="Texto texto texto texto texto texto" FontSize="9" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+            </Viewbox>
+
+
+        </Grid>
+
+
+
     </Grid>
 </Page>

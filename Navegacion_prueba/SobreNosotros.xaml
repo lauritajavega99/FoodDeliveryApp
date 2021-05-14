@@ -9,6 +9,67 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
-        <TextBlock x:Name="txtBienvenido" Text="Sobre Nosotros" FontSize="24" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="720*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="365*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Viewbox x:Name="vbAboutUs" Grid.Row="0" Grid.Column="1" Width="300">
+            <TextBlock x:Name="txtAboutUs" Text="Sobre Nosotros" FontSize="11" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+        </Viewbox>
+
+        <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta8" />
+        <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irAboutUs8" Width="100" />
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="301.999"/>
+                <RowDefinition Height="135.333"/>
+                <RowDefinition Height="180.667"/>
+                <RowDefinition Height="180"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="360*"/>
+                <ColumnDefinition Width="360*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="imgLaura" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="200" Source="/Assets/girl.png"/>
+            <Image x:Name="imgMiguel" Grid.Column="1" HorizontalAlignment="Center" Height="200" VerticalAlignment="Center" Width="200" Source="/Assets/boy.png"/>
+
+            <Viewbox x:Name="vbLaura" Grid.Row="1" Grid.Column="0" Margin="25,0,25,0" VerticalAlignment="Top" Height="133">
+                <TextBlock x:Name="txtLaura" Text="Laura Muñoz Jávega" FontSize="11" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Stretch"/>
+            </Viewbox>
+
+            <Viewbox x:Name="vbMiguel" Grid.Row="1" Margin="25,0,25,0" Grid.Column="1" VerticalAlignment="Top" Height="123">
+                <TextBlock x:Name="txtMiguel" Text="Miguel Pellicer Domínguez" FontSize="11" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+            </Viewbox>
+
+            <Viewbox x:Name="vbLaura1" Grid.Row="2" Grid.Column="0" Margin="30,0,30,0" VerticalAlignment="Center" Height="93">
+                <TextBlock x:Name="txtLaura1" Text="texto texto texto texto texto" FontSize="9" Margin="6" FontWeight="Normal" FontFamily="Agency FB" VerticalAlignment="Stretch"/>
+            </Viewbox>
+
+            <Viewbox x:Name="vbMiguel1" Grid.Row="2" Grid.Column="1" Margin="30,0,30,0" VerticalAlignment="Center" Height="93">
+                <TextBlock x:Name="txtMiguel1" Text="texto texto texto texto texto" FontSize="9" Margin="6" FontWeight="Normal" FontFamily="Agency FB" VerticalAlignment="Stretch"/>
+            </Viewbox>
+
+            <HyperlinkButton NavigateUri="https://esi.uclm.es" Grid.Row="3" HorizontalAlignment="Center" Height="120" Width="120" VerticalAlignment="Top">
+                <Image Source="Assets/esiLogo.png" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Width="120" Height="120"/>
+            </HyperlinkButton>
+
+            <HyperlinkButton NavigateUri="https://www.uclm.es" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" Height="120" Width="120" VerticalAlignment="Top">
+                <Image Source="Assets/uclmLogo.jpg" HorizontalAlignment="Right" VerticalAlignment="Center" Width="120" Height="120"/>
+            </HyperlinkButton>
+
+        </Grid>
+
+
     </Grid>
 </Page>

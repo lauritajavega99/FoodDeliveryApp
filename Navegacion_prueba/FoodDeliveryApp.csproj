@@ -175,10 +175,13 @@
     <Content Include="Assets\banner1.png" />
     <Content Include="Assets\banner2.png" />
     <Content Include="Assets\banner3.png" />
+    <Content Include="Assets\boy.png" />
     <Content Include="Assets\buscar.png" />
     <Content Include="Assets\carro.png" />
     <Content Include="Assets\contacto.png" />
     <Content Include="Assets\entrantes.png" />
+    <Content Include="Assets\esiLogo.png" />
+    <Content Include="Assets\girl.png" />
     <Content Include="Assets\hamburguesa1.png" />
     <Content Include="Assets\hamburguesa2.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
@@ -228,6 +231,7 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\StoreLogo.scale-200.png" />
     <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\uclmLogo.jpg" />
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />

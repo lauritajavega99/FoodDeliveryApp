@@ -140,6 +140,7 @@
     <Compile Include="Menus.xaml.cs">
       <DependentUpon>Menus.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProdOfertas.cs" />
     <Compile Include="Models\ProductosApp.cs" />
     <Compile Include="Ofertas.xaml.cs">
       <DependentUpon>Ofertas.xaml</DependentUpon>

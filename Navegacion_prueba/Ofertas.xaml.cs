@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoodDeliveryApp.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,22 @@ namespace FoodDeliveryApp
     /// </summary>
     public sealed partial class Ofertas : Page
     {
+        private List<ProdOfertas> pApp;
+
         public Ofertas()
         {
             this.InitializeComponent();
+            pApp = GestionOfertas.GetOfertas();
+        }
+
+        private void irCesta8(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CestaCompra));
+        }
+
+        private void irAboutUs8(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SobreNosotros));
         }
     }
 }

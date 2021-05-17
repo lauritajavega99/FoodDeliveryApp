@@ -8,14 +8,16 @@
     mc:Ignorable="d" Height="360" Width="500">
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="128*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="27*"/>
+            <RowDefinition Height="259*"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="29"/>
+            <RowDefinition Height="29"/>
 
         </Grid.RowDefinitions>
         <Image x:Name="imgProd" HorizontalAlignment="Center" Height="230" VerticalAlignment="Center" Width="230"/>
         <TextBlock x:Name="txtNombre" Grid.Row="1" Text="Nombre Producto" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Agency FB" FontSize="14" TextAlignment="Center" Margin="166,9,170,15"/>
-        <TextBlock x:Name="txtDescripcion" Grid.Row="2" Text="Descripción" TextWrapping="Wrap" Margin="152,10,166,8" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB"/>
-
+        <TextBlock x:Name="txtDescripcion" Grid.Row="2" Text="Descripción" TextWrapping="Wrap" Margin="0,0,0,0" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="txtPrecio" Grid.Row="3" Text="Precio" TextWrapping="Wrap" Margin="0,0,0,0" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" VerticalAlignment="Stretch"/>
+        
     </Grid>
 </UserControl>

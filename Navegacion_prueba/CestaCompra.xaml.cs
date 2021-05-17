@@ -60,8 +60,10 @@ namespace FoodDeliveryApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            dgProductos.ItemsSource = null;
-
+            //dgProductos.ItemsSource = null;
+            Productos.Clear();
+            dgProductos.ItemsSource = Productos;
+            InitializeComponent();
         }
 
         private void Pagar(object sender, RoutedEventArgs e)

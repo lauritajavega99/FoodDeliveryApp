@@ -25,32 +25,11 @@ namespace FoodDeliveryApp
     /// </summary>
     public sealed partial class Productos : Page
     {
-        private List<ProductosApp> pApp;
+
         public Productos()
         {
             this.InitializeComponent();
-            pApp = GestionProducto.GetTiposProductos();
-        }
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var product = (ProductosApp)e.ClickedItem;
-
-            switch (product.Nombre)
-            {
-                case "Hamburguesas":
-                    this.Frame.Navigate(typeof(Hamburguesas));
-                    break;
-                case "Pizzas":
-                    this.Frame.Navigate(typeof(Pizzas));
-                    break;
-                case "Entrantes":
-                    this.Frame.Navigate(typeof(Entrantes));
-                    break;
-                case "Postres":
-                    this.Frame.Navigate(typeof(Postres));
-                    break;
-            }
 
         }
 
@@ -62,6 +41,26 @@ namespace FoodDeliveryApp
         private void irCesta1(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CestaCompra));
+        }
+
+        private void irHamburguesas(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Hamburguesas));
+        }
+
+        private void irPizzas(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pizzas));
+        }
+
+        private void irEntrantes(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Entrantes));
+        }
+
+        private void irPostres(object sender, PointerRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Postres));
         }
     }
 }

@@ -30,8 +30,7 @@ namespace Navegacion_prueba
         public PaginaDetalle()
         {
             this.InitializeComponent();
-            this.ucProducto.Nombretxt = "Hamburguesa con queso";
-            this.ucProducto.Descripciontxt = "Muy rica.";
+          
             this.ucProducto.ImagenProd.Source = new BitmapImage(new Uri("ms-appx:///Assets//hamburguesa1.png"));
         }
 
@@ -48,6 +47,21 @@ namespace Navegacion_prueba
         private void btnAniadirCarro_Click(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        public  void setNombre(string nombre)
+        {
+            this.ucProducto.Nombretxt = nombre;
+        }
+
+        public void setDescripcion(string descripcion)
+        {
+            this.ucProducto.Nombretxt = descripcion;
+        }
+
+        public void setPrecio(string precio)
+        {
+            this.ucProducto.Nombretxt = precio;
         }
     }
 }

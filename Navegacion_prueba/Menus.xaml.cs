@@ -24,12 +24,10 @@ namespace FoodDeliveryApp
     /// </summary>
     public sealed partial class Menus : Page
     {
-        private List<ProductosApp> pApp;
 
         public Menus()
         {
             this.InitializeComponent();
-            pApp = GestionProducto.GetMenus();
         }
 
         private void irCesta5(object sender, PointerRoutedEventArgs e)

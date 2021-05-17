@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,96 +10,62 @@ namespace FoodDeliveryApp.Models
 {
    public class ProductosApp
     {
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public string imagenProducto { get; set; }
+        private String nombre;
+        private String descripcion;
+        private int cantidad;
+        private double precio;
+        private Image imagen = new Image();
+  
+
+        public ProductosApp(String nombre, String descripcion, int cantidad, double precio, String pathImagen)
+        {
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.cantidad = cantidad;
+            this.precio = precio;
+            this.imagen.Source = new BitmapImage(new Uri(pathImagen));
+        }
+
+        public ProductosApp(String nombre, double precio, String pathImagen)
+        {
+            this.nombre = nombre;
+            this.precio = precio;
+            this.imagen.Source = new BitmapImage(new Uri(pathImagen));
+        }
+
+
+        public String Nombre
+        {
+            get { return this.nombre; }
+            set { this.nombre = value; }
+        }
+
+        public String Descripcion
+        {
+            get { return this.descripcion; }
+            set { this.descripcion = value; }
+        }
+
+        public int Cantidad
+        {
+            get { return this.cantidad; }
+            set { this.cantidad = value; }
+        }
+
+        public double Precio
+        {
+            get { return this.precio; }
+            set { this.precio = value; }
+        }
+
+       
+
+        public Image Imagen
+        {
+            get { return this.imagen; }
+            set { this.imagen = value; }
+        }
+
     }
 
-    public class GestionProducto
-    {
-        public static List<ProductosApp> GetTiposProductos()
-        {
-            var productosApp = new List<ProductosApp>();
-
-            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Pizzas", imagenProducto = "Assets/pizzas.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/entrantes.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/postres.png" });
-           
-
-            return productosApp;
-        }
-
-        public static List<ProductosApp> GetHamburguesas()
-        {
-            var productosApp = new List<ProductosApp>();
-
-            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Pizzas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-
-            return productosApp;
-        }
-
-        public static List<ProductosApp> GetPizzas()
-        {
-            var productosApp = new List<ProductosApp>();
-
-            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Pizzas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-
-            return productosApp;
-        }
-
-        public static List<ProductosApp> GetEntrantes()
-        {
-            var productosApp = new List<ProductosApp>();
-
-            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Pizzas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-
-            return productosApp;
-        }
-
-        public static List<ProductosApp> GetPostres()
-        {
-            var productosApp = new List<ProductosApp>();
-
-            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Pizzas", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", imagenProducto = "Assets/Hamburguesa1.png" });
-
-            return productosApp;
-        }
-
-        public static List<ProductosApp> GetMenus()
-        {
-            var productosApp = new List<ProductosApp>();
-
-            productosApp.Add(new ProductosApp { Nombre = "Hamburguesas", Descripcion ="Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Pizzas", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Entrantes", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
-            productosApp.Add(new ProductosApp { Nombre = "Postres", Descripcion = "Incluye 2 hamburguesas de pollo y queso, 2 patatas pequeñas y bebida.", imagenProducto = "Assets/Hamburguesa1.png" });
-
-            return productosApp;
-        }
-
-        
-    }
 }

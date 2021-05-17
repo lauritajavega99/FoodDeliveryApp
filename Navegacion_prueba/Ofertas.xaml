@@ -9,29 +9,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-        <DataTemplate x:Key = "ImageTextTemplate" x:DataType = "data:ProdOfertas">
-            <Grid AutomationProperties.Name = '{x:Bind Nombre}' Width = '270'>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width = 'Auto'/>
-                    <ColumnDefinition Width = '*'/>
-                </Grid.ColumnDefinitions>
-                <Image Source = '{x:Bind imagenProducto}' Height = '50' Stretch = 'Uniform' VerticalAlignment = 'Top' Margin="5,5,5,5"/>
-                <StackPanel Grid.Column = '1' Margin = '8,0,0,8'>
-                    <TextBlock Text = '{x:Bind Nombre}' Style = '{ThemeResource SubtitleTextBlockStyle}' Margin = '0,0,0,8'/>
-                    <StackPanel Orientation = 'Horizontal'>
-                        <TextBlock Text = '{x:Bind Descripcion}' Style = '{ThemeResource CaptionTextBlockStyle}'/>
-                    </StackPanel>
-                    <StackPanel Orientation = 'Horizontal'>
-                        <TextBlock Text = '{x:Bind Precio}' Style = '{ThemeResource CaptionTextBlockStyle}'/>
-                        <TextBlock Text = "€" Style = '{ThemeResource CaptionTextBlockStyle}'/>
-
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-        </DataTemplate>
-    </Page.Resources>
-    
+ 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -49,10 +27,7 @@
         <GridView
         x:Name="ContentGridView"
         Background="#FFDBDBDB"
-        ItemsSource="{x:Bind pApp}"
-        ItemTemplate="{StaticResource ImageTextTemplate}"
-        SelectionMode="Single"
-        FlowDirection="LeftToRight" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>   
+         Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>   
 
 
         <Viewbox x:Name="vbOfertas" Grid.Row="0" Grid.Column="1" Width="300">

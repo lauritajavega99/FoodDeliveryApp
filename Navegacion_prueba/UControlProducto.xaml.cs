@@ -18,37 +18,40 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Navegacion_prueba
 {
-    public sealed partial class Ucontrol : UserControl
+    public sealed partial class UControlProducto : UserControl
     {
-        private ProductosApp productos;
+        private ProductosApp producto;
 
-        public Ucontrol()
+        public UControlProducto(ProductosApp p)
         {
             this.InitializeComponent();
+            this.producto = p;
+            this.txtNombreP.Text = p.Nombre;
+            this.txtPrecioP.Text = Convert.ToString(p.Precio);
+            this.imgProd.Source = p.Imagen.Source;
         }
 
         public String Nombretxt
         {
-            get { return txtNombre.Text; }
-            set { txtNombre.Text = value; }
-        }
-
-        public String Descripciontxt
-        {
-            get { return txtDescripcion.Text; }
-            set { txtDescripcion.Text = value; }
+            get { return txtNombreP.Text; }
+            set { txtNombreP.Text = value; }
         }
 
         public String Preciotxt
         {
-            get { return txtPrecio.Text; }
-            set { txtPrecio.Text = value; }
+            get { return txtPrecioP.Text; }
+            set { txtPrecioP.Text = value; }
         }
 
         public Image ImagenProd
         {
             get { return imgProd; }
             set { imgProd = value; }
+        }
+
+        private void UserControl_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+           // ((Frame)Window.Current.Content).Navigate(typeof(PaginaDetalle));
         }
     }
 }

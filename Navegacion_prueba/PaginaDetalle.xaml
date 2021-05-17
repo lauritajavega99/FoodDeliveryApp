@@ -19,19 +19,19 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="147*"/>
-            <RowDefinition Height="648*"/>
-            <RowDefinition Height="69*"/>
-            <RowDefinition Height="137*"/>
+            <RowDefinition Height="439*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="344"/>
         </Grid.RowDefinitions>
 
         <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta6" />
         <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
-        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7,0,0,0" Source="/Assets/logoApp.png" Height="100" HorizontalAlignment="Left" PointerPressed="irAboutus6" Width="100" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7,23,0,24" Source="/Assets/logoApp.png" HorizontalAlignment="Left" PointerPressed="irAboutus6" Width="100" />
 
-        <Viewbox x:Name="vbDetalle" Grid.Row="0" Grid.Column="1" Width="300" Margin="400,0,400,647" Grid.RowSpan="2">
+        <Viewbox x:Name="vbDetalle" Grid.Row="0" Grid.Column="1" Margin="400,0,400,8">
             <TextBlock x:Name="txtDetalle" Text="Detalle Producto" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
         </Viewbox>
-        <local:Ucontrol x:Name="ucProducto" Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" Width="550" Height="400" VerticalAlignment="Top"/>
+        <local:Ucontrol x:Name="ucProducto" Grid.Column="1" Margin="0,0,0,0" Height="400" VerticalAlignment="Top" Grid.Row="1"/>
 
         <Button x:Name="btnAniadirCarro" Content="Añadir al carrito" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="40" Width="140" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" VerticalAlignment="Top" FocusVisualPrimaryBrush="#F2C63848" Background="#F2C63848" Click="btnAniadirCarro_Click"/>
 

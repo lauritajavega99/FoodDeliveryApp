@@ -153,13 +153,15 @@
     <Compile Include="Postres.xaml.cs">
       <DependentUpon>Postres.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Producto.cs" />
     <Compile Include="Productos.xaml.cs">
       <DependentUpon>Productos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SobreNosotros.xaml.cs">
       <DependentUpon>SobreNosotros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCcarrito.xaml.cs">
+      <DependentUpon>UCcarrito.xaml</DependentUpon>
     </Compile>
     <Compile Include="UCofertMenus.xaml.cs">
       <DependentUpon>UCofertMenus.xaml</DependentUpon>
@@ -304,6 +306,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SobreNosotros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UCcarrito.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

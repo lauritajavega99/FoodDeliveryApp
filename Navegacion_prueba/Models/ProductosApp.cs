@@ -14,6 +14,7 @@ namespace FoodDeliveryApp.Models
         private String descripcion;
         private int cantidad;
         private double precio;
+        private bool add;
         private Image imagen = new Image();
   
 
@@ -26,6 +27,7 @@ namespace FoodDeliveryApp.Models
             this.imagen.Source = new BitmapImage(new Uri(pathImagen));
         }
 
+        //constructor productos
         public ProductosApp(String nombre, double precio, String pathImagen)
         {
             this.nombre = nombre;
@@ -33,11 +35,23 @@ namespace FoodDeliveryApp.Models
             this.imagen.Source = new BitmapImage(new Uri(pathImagen));
         }
 
-        public ProductosApp(String nombre,String descripcion, double precio, String pathImagen)
+        //constructor menus y ofertas
+        public ProductosApp(String nombre,String descripcion, double precio, bool add, String pathImagen)
         {
             this.nombre = nombre;
             this.descripcion = descripcion;
             this.precio = precio;
+            this.add = add;
+            this.imagen.Source = new BitmapImage(new Uri(pathImagen));
+        }
+
+        //constructor carrito
+        public ProductosApp(String nombre, int cantidad, double precio,bool add, String pathImagen)
+        {
+            this.nombre = nombre;
+            this.cantidad = cantidad;
+            this.precio = precio;
+            this.add = add;
             this.imagen.Source = new BitmapImage(new Uri(pathImagen));
         }
 
@@ -66,7 +80,11 @@ namespace FoodDeliveryApp.Models
             set { this.precio = value; }
         }
 
-       
+        public bool Add
+        {
+            get { return this.add; }
+            set { this.add = value; }
+        }
 
         public Image Imagen
         {

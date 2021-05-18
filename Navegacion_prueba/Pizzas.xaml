@@ -24,12 +24,11 @@
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" IsEnabled="True">
+        <controls:AdaptiveGridView x:Name="gridView" Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" 
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+        IsItemClickEnabled="True">
 
-            <controls:WrapPanel x:Name="wrapPanel" Background="#FF3CD5E4" IsTapEnabled="True" Margin="0,0,0,0">
-
-            </controls:WrapPanel>
-        </ScrollViewer>
+        </controls:AdaptiveGridView>
 
         <Viewbox x:Name="vbPizzas" Grid.Row="0" Grid.Column="1" Width="300">
             <TextBlock x:Name="txtPizzas" Text="Carta de Pizzas" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>

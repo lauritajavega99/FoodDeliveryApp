@@ -1,5 +1,4 @@
-﻿using FoodDeliveryApp;
-using FoodDeliveryApp.Models;
+﻿using FoodDeliveryApp.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,17 +18,17 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Navegacion_prueba
 {
-    public sealed partial class UCofertMenus : UserControl
+    public sealed partial class UCcarrito : UserControl
     {
-        private ProductosApp producto;
+        public ProductosApp producto;
         private bool aniadido = false;
 
-        public UCofertMenus(ProductosApp pro)
+        public UCcarrito(ProductosApp pro)
         {
             this.InitializeComponent();
             this.producto = pro;
             this.txtTit.Text = pro.Nombre;
-            this.txtDesc.Text = pro.Descripcion;
+            this.txtCant.Text = Convert.ToString(pro.Cantidad);
             this.txtPrec.Text = Convert.ToString(pro.Precio);
             this.imgP.Source = pro.Imagen.Source;
             this.aniadido = pro.Add;
@@ -41,10 +40,10 @@ namespace Navegacion_prueba
             set { txtTit.Text = value; }
         }
 
-        public String Descriptxt
+        public String Canttxt
         {
-            get { return txtDesc.Text; }
-            set { txtDesc.Text = value; }
+            get { return txtCant.Text; }
+            set { txtCant.Text = value; }
         }
 
         public String Preciotxt
@@ -53,39 +52,17 @@ namespace Navegacion_prueba
             set { txtPrec.Text = value; }
         }
 
-        public Image ImagenProd
-        {
-            get { return imgP; }
-            set { imgP = value; }
-        }
-
         public bool Added
         {
             get { return aniadido; }
             set { aniadido = value; }
         }
 
-        private void addCesta(object sender, RoutedEventArgs e)
+        public Image ImagenProd
         {
-            if (aniadido == false)
-            {
-                producto.Add = true;
-                aniadido = true;
-                MainPage.Carrito.Add(this.producto);
-            }
-            else
-            {
-                producto.Add = false;
-                aniadido = false;
-
-                var prod = MainPage.Carrito.SingleOrDefault(x => x.Nombre == this.producto.Nombre);
-
-                if (prod != null)
-                {
-                    MainPage.Carrito.Remove(prod);
-                }
-            }
-            
+            get { return imgP; }
+            set { imgP = value; }
         }
+
     }
 }

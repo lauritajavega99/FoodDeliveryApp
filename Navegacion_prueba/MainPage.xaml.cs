@@ -1,4 +1,5 @@
-﻿using Microsoft.Toolkit.Uwp.Notifications;
+﻿using FoodDeliveryApp.Models;
+using Microsoft.Toolkit.Uwp.Notifications;
 using Navegacion_prueba;
 using System;
 using System.Collections.Generic;
@@ -27,12 +28,19 @@ namespace FoodDeliveryApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private static List<ProductosApp> cestaCompra = new List<ProductosApp>();
+
         public MainPage()
         {
             this.InitializeComponent();
             tilesApp();
         }
 
+        public static List<ProductosApp> Carrito
+        {
+            get { return cestaCompra; }
+            set { cestaCompra = value; }
+        }
         
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {

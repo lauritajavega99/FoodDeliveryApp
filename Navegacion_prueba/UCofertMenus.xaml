@@ -25,7 +25,7 @@
         <TextBlock x:Name="txtTit" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
         <TextBlock x:Name="txtDesc" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center"/>
         <TextBlock x:Name="txtPrec" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="0,13,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="btnAniadirCarro" Content="Añadir al carrito" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Height="40" Width="140" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" VerticalAlignment="Top" FocusVisualPrimaryBrush="#F2C63848" Background="#F2C63848" Margin="0,0,0,0"/>
+        <Button x:Name="btnAniadirCarro" Content="Añadir al carrito" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Height="40" Width="140" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" VerticalAlignment="Top" FocusVisualPrimaryBrush="#F2C63848" Background="#F2C63848" Margin="0,0,0,0" Click="addCesta"/>
 
     </Grid>
 </UserControl>

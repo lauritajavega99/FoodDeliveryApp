@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Navegacion_prueba;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,21 +18,19 @@ using Windows.UI.Xaml.Navigation;
 
 namespace FoodDeliveryApp
 {
-   
 
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
     public sealed partial class CestaCompra : Page
     {
-        //Creamos la Lista de productos para el datagrid
-        public List<Producto> Productos;
+        private UCcarrito uc1;
 
         public CestaCompra()
         {
             this.InitializeComponent();
-            Productos = ValoresEjemplo.GetValores();
-            sumaPrecio(Productos);
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+
 
         }
 
@@ -40,17 +39,17 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-
-        private void sumaPrecio(List<Producto> listproductos)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            double total = 0;
-
-            foreach (Producto p in listproductos)
+            listView.Items.Clear();
+            for(int i = 0; i<MainPage.Carrito.Count; i++)
             {
-                total += p.Precio;
+                uc1 = new UCcarrito(MainPage.Carrito.ElementAt(i));
+                uc1.Margin = new Thickness(0, 10, 0, 10);
+                uc1.Added = true;
+                sumaCompra(MainPage.Carrito.ElementAt(i).Precio);
+                listView.Items.Add(uc1);
             }
-
-            txtTotal.Text = "Total: " + total + " euros.";
         }
 
         private void irAboutUS(object sender, PointerRoutedEventArgs e)
@@ -58,13 +57,17 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(SobreNosotros));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void sumaCompra(double p)
         {
-            //dgProductos.ItemsSource = null;
-            Productos.Clear();
-            dgProductos.ItemsSource = Productos;
-            InitializeComponent();
+            double total = 0;
+
+            for (int i = 0; i < MainPage.Carrito.Count; i++)
+            {
+                total += p;
+                txtTotal.Text = "Total: " + total + " euros.";
+            }
         }
+
 
         private void Pagar(object sender, RoutedEventArgs e)
         {
@@ -81,9 +84,14 @@ namespace FoodDeliveryApp
             };
 
             ContentDialogResult result = await noWifiDialog.ShowAsync();
+            listView.Items.Clear();
+            txtTotal.Text = "Total: ";
+        }
 
-            dgProductos.ItemsSource = null;
-
+        private void limpiarCesta(object sender, RoutedEventArgs e)
+        {
+            listView.Items.Clear();
+            txtTotal.Text = "Total: ";
         }
     }
 

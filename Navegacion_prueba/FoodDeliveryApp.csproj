@@ -140,7 +140,6 @@
     <Compile Include="Menus.xaml.cs">
       <DependentUpon>Menus.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProdOfertas.cs" />
     <Compile Include="Models\ProductosApp.cs" />
     <Compile Include="Ofertas.xaml.cs">
       <DependentUpon>Ofertas.xaml</DependentUpon>
@@ -161,6 +160,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SobreNosotros.xaml.cs">
       <DependentUpon>SobreNosotros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCofertMenus.xaml.cs">
+      <DependentUpon>UCofertMenus.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ucontrol.xaml.cs">
       <DependentUpon>Ucontrol.xaml</DependentUpon>
@@ -302,6 +304,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SobreNosotros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCofertMenus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

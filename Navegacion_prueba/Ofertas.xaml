@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page xmlns:my="using:Navegacion_prueba" 
     x:Class="FoodDeliveryApp.Ofertas"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -24,14 +24,16 @@
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
 
-        <GridView
-        x:Name="ContentGridView"
-        Background="#FFDBDBDB"
-         Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>   
+        <ListView x:Name="listView" Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" 
+        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+        IsItemClickEnabled="True" ItemClick="listView_ItemClick">
+
+        </ListView>
+
 
 
         <Viewbox x:Name="vbOfertas" Grid.Row="0" Grid.Column="1" Width="300">
-            <TextBlock x:Name="txtOfertas" Text="Ofertas" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
+            <TextBlock x:Name="txtOfertas" Text="Ofertas especiales" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
         </Viewbox>
 
         <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta8" />

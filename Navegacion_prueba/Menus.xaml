@@ -1,12 +1,10 @@
-﻿<Page
+﻿<Page xmlns:my="using:Navegacion_prueba" 
     x:Class="FoodDeliveryApp.Menus"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FoodDeliveryApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:data ="using:FoodDeliveryApp.Models"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
 
@@ -24,9 +22,9 @@
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
 
-        <GridView Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1">
-
-        </GridView>
+        <ListView x:Name="listView" Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsItemClickEnabled="True" Padding="0,10,0,0">
+            
+        </ListView>
 
         <Viewbox x:Name="vbMenus" Grid.Row="0" Grid.Column="1" Width="300">
             <TextBlock x:Name="txtMenus" Text="Carta de Menús" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>

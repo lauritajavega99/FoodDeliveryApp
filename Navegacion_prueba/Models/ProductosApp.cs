@@ -33,6 +33,14 @@ namespace FoodDeliveryApp.Models
             this.imagen.Source = new BitmapImage(new Uri(pathImagen));
         }
 
+        public ProductosApp(String nombre,String descripcion, double precio, String pathImagen)
+        {
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.precio = precio;
+            this.imagen.Source = new BitmapImage(new Uri(pathImagen));
+        }
+
 
         public String Nombre
         {

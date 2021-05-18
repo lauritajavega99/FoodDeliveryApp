@@ -15,7 +15,6 @@
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Home" Content="Inicio" Tag="Inicio" FontWeight="Bold" FontFamily="Agency FB" FontSize="18">
                     
-
                 </NavigationViewItem>
 
                 <NavigationViewItem  Content="Productos" Tag="Productos" FontWeight="Bold" FontSize="18" FontFamily="Agency FB">

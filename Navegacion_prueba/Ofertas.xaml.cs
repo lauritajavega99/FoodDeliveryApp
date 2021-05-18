@@ -27,27 +27,27 @@ namespace FoodDeliveryApp
       
         public Ofertas()
         {
-            ProductosApp m1 = new ProductosApp("Oferta 1", "The Queen + patatas deluxe.", 4.50, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m1 = new ProductosApp("Oferta 1", "The Queen + patatas deluxe.", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc1 = new UCofertMenus(m1);
             uc1.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m2 = new ProductosApp("Oferta 2", "The Queen + patatas deluxe.", 4.50, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m2 = new ProductosApp("Oferta 2", "The Queen + patatas deluxe.", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc2 = new UCofertMenus(m2);
             uc2.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m3 = new ProductosApp("Oferta 3", "The Queen + patatas deluxe.", 4.50, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m3 = new ProductosApp("Oferta 3", "The Queen + patatas deluxe.", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc3 = new UCofertMenus(m3);
             uc3.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m4 = new ProductosApp("Oferta 4", "The Queen + patatas deluxe.", 4.50, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m4 = new ProductosApp("Oferta 4", "The Queen + patatas deluxe.", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc4 = new UCofertMenus(m4);
             uc4.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m5 = new ProductosApp("Oferta 5", "The Queen + patatas deluxe.", 4.50, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m5 = new ProductosApp("Oferta 5", "The Queen + patatas deluxe.", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc5 = new UCofertMenus(m5);
             uc5.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m6 = new ProductosApp("Oferta 6", "The Queen + patatas deluxe.", 4.50, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m6 = new ProductosApp("Oferta 6", "The Queen + patatas deluxe.", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc6 = new UCofertMenus(m6);
             uc6.Margin = new Thickness(0, 10, 0, 10);
 
@@ -74,8 +74,7 @@ namespace FoodDeliveryApp
 
         private void listView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var book = e.ClickedItem;
-            this.Frame.Navigate(typeof(PaginaDetalle));
+    
         }
     }
 }

@@ -26,7 +26,7 @@
 
         <controls:AdaptiveGridView x:Name="gridView" Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" 
         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-        IsItemClickEnabled="True">
+        IsItemClickEnabled="True" ItemClick="gridView_ItemClick">
 
         </controls:AdaptiveGridView>
 

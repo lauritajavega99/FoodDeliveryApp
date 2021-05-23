@@ -9,12 +9,13 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid x:Name="gridUC">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="720*"/>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
+
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -31,9 +32,11 @@
         <Viewbox x:Name="vbDetalle" Grid.Row="0" Grid.Column="1" Margin="400,0,400,8">
             <TextBlock x:Name="txtDetalle" Text="Detalle Producto" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
         </Viewbox>
-        <local:Ucontrol x:Name="ucProducto" Grid.Column="1" Margin="0,0,0,0" Height="400" VerticalAlignment="Top" Grid.Row="1"/>
+
+        <local:Ucontrol x:Name="ucProducto" Grid.Column="1" Margin="0" VerticalAlignment="Center" Grid.Row="1"/>
 
         <Button x:Name="btnAniadirCarro" Content="Añadir al carrito" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="40" Width="140" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" VerticalAlignment="Top" FocusVisualPrimaryBrush="#F2C63848" Background="#F2C63848" Click="btnAniadirCarro_Click"/>
+
 
     </Grid>
 

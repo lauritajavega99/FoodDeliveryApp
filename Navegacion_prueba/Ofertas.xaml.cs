@@ -72,9 +72,5 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(SobreNosotros));
         }
 
-        private void listView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-    
-        }
     }
 }

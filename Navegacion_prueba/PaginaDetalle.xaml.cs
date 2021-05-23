@@ -1,5 +1,6 @@
 ﻿using FoodDeliveryApp;
 using FoodDeliveryApp.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,13 +26,14 @@ namespace Navegacion_prueba
     /// </summary>
     public sealed partial class PaginaDetalle : Page
     {
-        
+        public ProductosApp producto;
+        private bool aniadido = false;
 
         public PaginaDetalle()
         {
             this.InitializeComponent();
-          
-            this.ucProducto.ImagenProd.Source = new BitmapImage(new Uri("ms-appx:///Assets//hamburguesa1.png"));
+            
+            
         }
 
         private void irCesta6(object sender, PointerRoutedEventArgs e)
@@ -44,24 +46,44 @@ namespace Navegacion_prueba
             this.Frame.Navigate(typeof(SobreNosotros));
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+
+            var param = (UControlProducto)e.Parameter;
+            ucProducto.Nombretxt = param.Prod.Nombre;
+            ucProducto.Descripciontxt = param.Prod.Descripcion;
+            ucProducto.Preciotxt = Convert.ToString(param.Prod.Precio);
+            ucProducto.ImagenProd.Source = param.Prod.Imagen.Source;
+            
+           
+            base.OnNavigatedTo(e);
+        }
+
         private void btnAniadirCarro_Click(object sender, RoutedEventArgs e)
         {
+            producto = new ProductosApp(ucProducto.Nombretxt ,1, Convert.ToDouble(ucProducto.Preciotxt), false, ucProducto.ImagenProd);
             
-        }
+            if (aniadido == false)
+            {
+                producto.Add = true;
+                aniadido = true;
+                MainPage.Carrito.Add(this.producto);
+            }
+            else
+            {
+                producto.Add = false;
+                aniadido = false;
 
-        public  void setNombre(string nombre)
-        {
-            this.ucProducto.Nombretxt = nombre;
-        }
+                var prod = MainPage.Carrito.SingleOrDefault(x => x.Nombre == this.producto.Nombre);
 
-        public void setDescripcion(string descripcion)
-        {
-            this.ucProducto.Nombretxt = descripcion;
-        }
+                if (prod != null)
+                {
+                    MainPage.Carrito.Remove(prod);
+                }
+            }
 
-        public void setPrecio(string precio)
-        {
-            this.ucProducto.Nombretxt = precio;
+            
+
         }
     }
 }

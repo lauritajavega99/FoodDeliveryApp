@@ -1,4 +1,5 @@
-﻿using FoodDeliveryApp.Models;
+﻿using FoodDeliveryApp;
+using FoodDeliveryApp.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,11 +21,12 @@ namespace Navegacion_prueba
 {
     public sealed partial class Ucontrol : UserControl
     {
-        private ProductosApp productos;
+
 
         public Ucontrol()
         {
             this.InitializeComponent();
+
         }
 
         public String Nombretxt

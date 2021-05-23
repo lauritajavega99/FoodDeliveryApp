@@ -27,37 +27,37 @@ namespace Navegacion_prueba
 
         public Pizzas()
         {
-            ProductosApp z1 = new ProductosApp("Barbacoa", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z1 = new ProductosApp("Barbacoa", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
             UControlProducto uc1 = new UControlProducto(z1);
             uc1.Height = 250;
             uc1.Width = 250;
             uc1.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z2 = new ProductosApp("4 quesos", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z2 = new ProductosApp("4 quesos", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
             UControlProducto uc2 = new UControlProducto(z2);
             uc2.Height = 250;
             uc2.Width = 250;
             uc2.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z3 = new ProductosApp("Boloñesa", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z3 = new ProductosApp("Boloñesa", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
             UControlProducto uc3 = new UControlProducto(z3);
             uc3.Height = 250;
             uc3.Width = 250;
             uc3.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z4 = new ProductosApp("Carbonara", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z4 = new ProductosApp("Carbonara", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
             UControlProducto uc4 = new UControlProducto(z4);
             uc4.Height = 250;
             uc4.Width = 250;
             uc4.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z5 = new ProductosApp("Kebab", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z5 = new ProductosApp("Kebab", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
             UControlProducto uc5 = new UControlProducto(z5);
             uc5.Height = 250;
             uc5.Width = 250;
             uc5.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z6 = new ProductosApp("Tropical", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z6 = new ProductosApp("Tropical", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
             UControlProducto uc6 = new UControlProducto(z6);
             uc6.Height = 250;
             uc6.Width = 250;
@@ -82,6 +82,13 @@ namespace Navegacion_prueba
         private void irAboutUs3(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SobreNosotros));
+        }
+
+        private void gridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var producto = (UControlProducto)e.ClickedItem;
+
+            Frame.Navigate(typeof(PaginaDetalle), producto);
         }
     }
 }

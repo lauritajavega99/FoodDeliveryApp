@@ -22,7 +22,7 @@
             <ColumnDefinition Width="190"/>
         </Grid.ColumnDefinitions>
 
-        <Image x:Name="imgP" HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="130" Source="/Assets/hamburguesa1.png" Grid.RowSpan="3" Margin="0,18,0,0"/>
+        <Image x:Name="imgP" HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="130" Source="/Assets/pizzas.png" Grid.RowSpan="3" Margin="0,18,0,0"/>
         <TextBlock x:Name="txtTit" Grid.Column="2" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Margin="25,0,0,0"/>
         <TextBlock x:Name="txtCant" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Margin="25,0,0,0"/>
         <TextBlock x:Name="txtPrec" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="25,13,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>

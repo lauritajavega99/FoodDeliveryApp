@@ -32,6 +32,7 @@ namespace Navegacion_prueba
             this.txtPrec.Text = Convert.ToString(pro.Precio);
             this.imgP.Source = pro.Imagen.Source;
             this.aniadido = pro.Add;
+            
         }
 
         public String Nombretxt

@@ -37,6 +37,11 @@ namespace Navegacion_prueba
             set { txtNombreP.Text = value; }
         }
 
+        public ProductosApp Prod
+        {
+            get { return producto; }
+        }
+
         public String Preciotxt
         {
             get { return txtPrecioP.Text; }
@@ -49,9 +54,5 @@ namespace Navegacion_prueba
             set { imgProd = value; }
         }
 
-        private void UserControl_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-           // ((Frame)Window.Current.Content).Navigate(typeof(PaginaDetalle));
-        }
     }
 }

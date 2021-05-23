@@ -27,37 +27,37 @@ namespace Navegacion_prueba
 
         public Entrantes()
         {
-            ProductosApp e1 = new ProductosApp("Fingers de queso", 4.50, "ms-appx:///Assets/entrantes.png");
+            ProductosApp e1 = new ProductosApp("Fingers de queso", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/entrantes.png");
             UControlProducto uc1 = new UControlProducto(e1);
             uc1.Height = 250;
             uc1.Width = 250;
             uc1.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp e2 = new ProductosApp("Patatas clásicas", 4.50, "ms-appx:///Assets/entrantes.png");
+            ProductosApp e2 = new ProductosApp("Patatas clásicas", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/entrantes.png");
             UControlProducto uc2 = new UControlProducto(e2);
             uc2.Height = 250;
             uc2.Width = 250;
             uc2.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp e3 = new ProductosApp("Patatas Deluxe", 4.50, "ms-appx:///Assets/entrantes.png");
+            ProductosApp e3 = new ProductosApp("Patatas Deluxe", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/entrantes.png");
             UControlProducto uc3 = new UControlProducto(e3);
             uc3.Height = 250;
             uc3.Width = 250;
             uc3.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp e4 = new ProductosApp("Bolas de queso", 4.50, "ms-appx:///Assets/entrantes.png");
+            ProductosApp e4 = new ProductosApp("Bolas de queso", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/entrantes.png");
             UControlProducto uc4 = new UControlProducto(e4);
             uc4.Height = 250;
             uc4.Width = 250;
             uc4.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp e5 = new ProductosApp("Ensalada césar", 4.50, "ms-appx:///Assets/entrantes.png");
+            ProductosApp e5 = new ProductosApp("Ensalada césar", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/entrantes.png");
             UControlProducto uc5 = new UControlProducto(e5);
             uc5.Height = 250;
             uc5.Width = 250;
             uc5.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp e6 = new ProductosApp("chicken nuggets", 4.50, "ms-appx:///Assets/entrantes.png");
+            ProductosApp e6 = new ProductosApp("chicken nuggets", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/entrantes.png");
             UControlProducto uc6 = new UControlProducto(e6);
             uc6.Height = 250;
             uc6.Width = 250;
@@ -81,6 +81,13 @@ namespace Navegacion_prueba
         private void irAboutUs4(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SobreNosotros));
+        }
+
+        private void gridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var producto = (UControlProducto)e.ClickedItem;
+
+            Frame.Navigate(typeof(PaginaDetalle), producto);
         }
     }
 }

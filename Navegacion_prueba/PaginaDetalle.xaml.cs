@@ -41,9 +41,9 @@ namespace Navegacion_prueba
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-        private void irAboutus6(object sender, PointerRoutedEventArgs e)
+        private void irInicio6(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

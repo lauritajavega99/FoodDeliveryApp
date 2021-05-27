@@ -33,9 +33,9 @@ namespace FoodDeliveryApp
 
         }
 
-        private void irAboutUs1(object sender, PointerRoutedEventArgs e)
+        private void irInicio2(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
 
         private void irCesta1(object sender, PointerRoutedEventArgs e)

@@ -27,37 +27,37 @@ namespace Navegacion_prueba
 
         public Postres()
         {
-            ProductosApp p1 = new ProductosApp("Tarta de queso", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/postres.png");
+            ProductosApp p1 = new ProductosApp("Tarta de queso", "Tarta de queso idiazabal cremosa, que nos recuerda a las zonas del norte de España, con una cobertura de confitura", 5.50, "ms-appx:///Assets/postresTartaqueso.png");
             UControlProducto uc1 = new UControlProducto(p1);
             uc1.Height = 250;
             uc1.Width = 250;
             uc1.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp p2 = new ProductosApp("Bola de helado", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/postres.png");
+            ProductosApp p2 = new ProductosApp("Bola de helado", "Si te quieres refrescar con un sabor veraniego, una tarrina en que tenemos vainilla, chocolate y fresa", 4.00, "ms-appx:///Assets/postresHelado.png");
             UControlProducto uc2 = new UControlProducto(p2);
             uc2.Height = 250;
             uc2.Width = 250;
             uc2.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp p3 = new ProductosApp("Cookie de chocolate", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/postres.png");
+            ProductosApp p3 = new ProductosApp("Cookie de chocolate", "Deliciosas galletas con pepitas de chocolate al estilo de la abuela", 3.50, "ms-appx:///Assets/postresCookies.png");
             UControlProducto uc3 = new UControlProducto(p3);
             uc3.Height = 250;
             uc3.Width = 250;
             uc3.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp p4 = new ProductosApp("Batido Oreo", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/postres.png");
+            ProductosApp p4 = new ProductosApp("Batido Oreo", "Increible batido con sabor a oreo, mezclado con leche y helado al estilo del BK", 4.00, "ms-appx:///Assets/postresOreoshake.png");
             UControlProducto uc4 = new UControlProducto(p4);
             uc4.Height = 250;
             uc4.Width = 250;
             uc4.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp p5 = new ProductosApp("Batido Caramelo", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/postres.png");
+            ProductosApp p5 = new ProductosApp("Batido Caramelo", "Batido al estilo americano, con sabor a caramelo", 4.00, "ms-appx:///Assets/postresCaramelshake.png");
             UControlProducto uc5 = new UControlProducto(p5);
             uc5.Height = 250;
             uc5.Width = 250;
             uc5.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp p6 = new ProductosApp("Brownie", "descripcion descripcion descripcion",4.50, "ms-appx:///Assets/postres.png");
+            ProductosApp p6 = new ProductosApp("Brownie", "Bizcocho de chocolate esponjoso con sabor intenso a cacao y crujientes nueces en su interior",4.50, "ms-appx:///Assets/postresBrowie.png");
             UControlProducto uc6 = new UControlProducto(p6);
             uc6.Height = 250;
             uc6.Width = 250;
@@ -78,9 +78,10 @@ namespace Navegacion_prueba
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-        private void irAboutUs2(object sender, PointerRoutedEventArgs e)
+
+        private void irInicio2(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
 
         private void gridView_ItemClick(object sender, ItemClickEventArgs e)

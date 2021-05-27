@@ -23,15 +23,15 @@
             <RowDefinition Height="325*"/>
             <RowDefinition Height="112*"/>
         </Grid.RowDefinitions>
-        <FlipView x:Name="fVslider" MaxWidth="400" Margin="0,0,0,0" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Width="500" Height="220" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
-            <Image Source="/Assets/banner1.png" AutomationProperties.Name="Cliff" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="400"/>
+        <FlipView x:Name="fVslider"  Margin="45,0,0,0" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Height="600" Grid.ColumnSpan="3">
+            <Image Source="/Assets/banner1.png" AutomationProperties.Name="Cliff" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             <Image Source="/Assets/banner2.png" AutomationProperties.Name="Grapes" Stretch="UniformToFill"/>
             <Image Source="/Assets/banner3.png" AutomationProperties.Name="Rainier" Stretch="UniformToFill"/>
         </FlipView>
 
         <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta" />
         <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="4" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
-        <Image x:Name="imgLogo" Margin="7" Grid.Row="0" Grid.Column="0" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irAboutUs" Width="100" />
+        <Image x:Name="imgLogo" Margin="7" Grid.Row="0" Grid.Column="0" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irInicio" Width="100" />
 
         <Button x:Name="btnCarta" Grid.Row="2" Grid.Column="0" Content="Carta productos" HorizontalAlignment="Right" Margin="0,4,4,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" FocusVisualPrimaryBrush="#FFC63848" Background="#FFC63848" Click="ClickbtnProductos" />
         <Button x:Name="btnMenus" Grid.Row="2" Grid.Column="1" Content="Menús" HorizontalAlignment="Center" Margin="0,4,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnMenus" />

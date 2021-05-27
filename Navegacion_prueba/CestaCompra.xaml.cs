@@ -52,9 +52,9 @@ namespace FoodDeliveryApp
             }
         }
 
-        private void irAboutUS(object sender, PointerRoutedEventArgs e)
+        private void irInicio(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
 
         private void sumaCompra(double p)

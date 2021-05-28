@@ -59,7 +59,7 @@ namespace FoodDeliveryApp
 
         private void sumaCompra(double p)
         {
-            double total = 0;
+            double total = 0.0;
 
             for (int i = 0; i < MainPage.Carrito.Count; i++)
             {
@@ -91,6 +91,7 @@ namespace FoodDeliveryApp
         private void limpiarCesta(object sender, RoutedEventArgs e)
         {
             listView.Items.Clear();
+            MainPage.clearList();
             txtTotal.Text = "Total: ";
         }
     }

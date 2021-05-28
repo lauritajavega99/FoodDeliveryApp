@@ -29,11 +29,11 @@
         <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
         <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7,23,0,24" Source="/Assets/logoApp.png" HorizontalAlignment="Left" PointerPressed="irInicio6" Width="100" />
 
-        <Viewbox x:Name="vbDetalle" Grid.Row="0" Grid.Column="1" Margin="400,0,400,8">
+        <Viewbox x:Name="vbDetalle" Grid.Row="0" Grid.Column="1" Margin="0">
             <TextBlock x:Name="txtDetalle" Text="Detalle Producto" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
         </Viewbox>
 
-        <local:Ucontrol x:Name="ucProducto" Grid.Column="1" Margin="300,29,300,29" Grid.Row="1"/>
+        <local:Ucontrol x:Name="ucProducto" Grid.Column="1" Margin="0" Grid.Row="1"/>
 
         <Button x:Name="btnAniadirCarro" Content="Añadir al carrito" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Height="40" Width="140" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" FocusVisualPrimaryBrush="#F2C63848" Background="#F2C63848" Click="btnAniadirCarro_Click"/>
 

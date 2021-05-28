@@ -30,7 +30,7 @@ namespace Navegacion_prueba
             this.producto = pro;
             this.txtTit.Text = pro.Nombre;
             this.txtDesc.Text = pro.Descripcion;
-            this.txtPrec.Text = Convert.ToString(pro.Precio);
+            this.txtPrec.Text = Convert.ToString(pro.Precio) + "€";
             this.imgP.Source = pro.Imagen.Source;
             this.aniadido = pro.Add;
         }

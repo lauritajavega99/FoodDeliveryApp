@@ -5,20 +5,30 @@
     xmlns:local="using:Navegacion_prueba"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="392" Width="500">
+    mc:Ignorable="d" Height="395" Width="500">
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="45"/>
             <RowDefinition Height="53"/>
-            <RowDefinition Height="29"/>
+            <RowDefinition Height="35"/>
 
         </Grid.RowDefinitions>
 
         <Image x:Name="imgProd" HorizontalAlignment="Center" Height="239" VerticalAlignment="Center" Width="243" Source="/Assets/pizzas.png"/>
-        <TextBlock x:Name="txtNombre" Grid.Row="1" Text="Nombre Producto" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Agency FB" FontSize="22" TextAlignment="Center" Margin="166,9,170,10"/>
-        <TextBlock x:Name="txtDescripcion" Grid.Row="2" Text="Descripción" TextWrapping="Wrap" Margin="0,0,0,5" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" FontSize="20"/>
-        <TextBlock x:Name="txtPrecio" Grid.Row="3" Text="Precio" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" FontSize="20" Margin="0,6,0,0"/>
+        <TextBlock x:Name="txtNombre" Grid.Row="1" Text="Nombre Producto" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Agency FB" FontSize="25" TextAlignment="Center" Margin="166,9,170,10"/>
+        <TextBlock x:Name="txtDescripcion" Grid.Row="2" Text="Descripción" TextWrapping="Wrap" Margin="0,0,0,5" FontWeight="Normal" TextAlignment="Center" FontFamily="Agency FB" FontSize="20"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="txtPrecio" Grid.Column="0" Text="Precio" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" FontSize="20" Margin="0,6,3,0" HorizontalAlignment="Right"/>
+            <TextBlock x:Name="txtSimbolo" Grid.Column="1" Text="€" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" FontSize="20" Margin="2,6,0,0" HorizontalAlignment="Left"/>
+        </Grid>
+
+
 
 
     </Grid>

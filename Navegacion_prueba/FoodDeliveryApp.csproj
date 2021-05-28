@@ -187,6 +187,7 @@
     <Content Include="Assets\boy.png" />
     <Content Include="Assets\buscar.png" />
     <Content Include="Assets\carro.png" />
+    <Content Include="Assets\close.png" />
     <Content Include="Assets\contacto.png" />
     <Content Include="Assets\entrantes.png" />
     <Content Include="Assets\esiLogo.png" />

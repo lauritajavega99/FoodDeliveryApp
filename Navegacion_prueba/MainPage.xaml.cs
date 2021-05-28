@@ -29,6 +29,7 @@ namespace FoodDeliveryApp
     public sealed partial class MainPage : Page
     {
         private static List<ProductosApp> cestaCompra = new List<ProductosApp>();
+        private static double total;
 
         public MainPage()
         {
@@ -42,11 +43,34 @@ namespace FoodDeliveryApp
             set { cestaCompra = value; }
         }
 
+        public static double Total
+        {
+            get { return total; }
+            set { total = value; }
+        }
+
+
         public static void clearList()
         {
             cestaCompra.Clear();
         }
-        
+
+        public static void sumaCompra()
+        {
+            total = 0.0;
+
+            for (int i = 0; i < MainPage.Carrito.Count; i++)
+            {
+                total += Carrito.ElementAt(i).Precio;
+            }
+
+            if (Carrito.Count == 0)
+            {
+                total = 0.0;
+            }
+
+        }
+
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)

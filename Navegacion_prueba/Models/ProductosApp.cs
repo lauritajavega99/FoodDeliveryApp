@@ -103,6 +103,7 @@ namespace FoodDeliveryApp.Models
             set { this.precio = value; }
         }
 
+
         public bool Add
         {
             get { return this.add; }

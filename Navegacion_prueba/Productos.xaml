@@ -39,7 +39,7 @@
                 <TextBlock FontSize="24"  HorizontalAlignment="Center" Text="Hamburguesas" FontFamily="Agency FB" FontWeight="Bold" />
             </StackPanel>
 
-            <StackPanel x:Name="spPizzas" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Width="464" Margin="0,0,0,0" PointerMoved="irPizzas">
+            <StackPanel x:Name="spPizzas" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Width="464" Margin="0,0,0,0" PointerPressed="irPizzas">
                 <Image Width="200" Source="/Assets/pizzas.png" Height="200" />
                 <TextBlock FontSize="24"  HorizontalAlignment="Center" Text="Pizzas" FontFamily="Agency FB" FontWeight="Bold" />
             </StackPanel>
@@ -51,7 +51,7 @@
 
             <StackPanel x:Name="spPostres" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="464" Margin="0,0,0,0" PointerPressed="irPostres">
                 <Image Width="200" Source="/Assets/postres.png" Height="200" />
-                <TextBlock FontSize="24"  HorizontalAlignment="Center" Text="Entrantes" FontFamily="Agency FB" FontWeight="Bold" />
+                <TextBlock FontSize="24"  HorizontalAlignment="Center" Text="Postres" FontFamily="Agency FB" FontWeight="Bold" />
             </StackPanel>
 
         </Grid>
@@ -62,7 +62,7 @@
 
         <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta1" />
         <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
-        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irAboutUs1" Width="100" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irInicio2" Width="100" />
 
 
     </Grid>

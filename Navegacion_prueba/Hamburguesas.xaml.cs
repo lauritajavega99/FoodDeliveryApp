@@ -28,37 +28,37 @@ namespace Navegacion_prueba
 
         public Hamburguesas()
         {
-            ProductosApp h1 = new ProductosApp("Cheese Please","descripcion descripcion descripcion", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp h1 = new ProductosApp("Cheese Please","Hambuguesa destinada especialmente para los amantes del queso, con increible cantida de cheddar", 7.50, false, "ms-appx:///Assets/hamburguesaqueso.png");
             UControlProducto uc1 = new UControlProducto(h1);
             uc1.Height = 250;
             uc1.Width = 250;
             uc1.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp h2 = new ProductosApp("Monteverde", "descripcion descripcion descripcion", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp h2 = new ProductosApp("Imperial", "Para los mayores demoradores de cada casa, se incluyen todos los ingredientes disponibles en el local", 9.50, false, "ms-appx:///Assets/hamburguesadobreCarne.png");
             UControlProducto uc2 = new UControlProducto(h2);
             uc2.Height = 250;
             uc2.Width = 250;
             uc2.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp h3 = new ProductosApp("De la Casa", "descripcion descripcion descripcion", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp h3 = new ProductosApp("Bacon Love", "Hamburguesa anormal debido a su extraordinario sabor a bacon debido a todo el que incluye", 8.50, false, "ms-appx:///Assets/baconHamburguesa.png");
             UControlProducto uc3 = new UControlProducto(h3);
             uc3.Height = 250;
             uc3.Width = 250;
             uc3.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp h4 = new ProductosApp("Imperial", "descripcion descripcion descripcion", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp h4 = new ProductosApp("Monteverde", "Esta hamburguesa es para la gente que opta por una opción más ligera con mayor cantidad de lechuga", 6.50, false, "ms-appx:///Assets/hamburguesamonteVerde.png");
             UControlProducto uc4 = new UControlProducto(h4);
             uc4.Height = 250;
             uc4.Width = 250;
             uc4.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp h5 = new ProductosApp("Burguer Bros", "descripcion descripcion descripcion", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp h5 = new ProductosApp("Burguer Bros", "Hamburguesa destina a los amantes del picante, ya que incluye pepinillo encurtidos en chile delicioso", 9.50, false, "ms-appx:///Assets/hamburguesaCarnePepino.png");
             UControlProducto uc5 = new UControlProducto(h5);
             uc5.Height = 250;
             uc5.Width = 250;
             uc5.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp h6 = new ProductosApp("The King", "descripcion descripcion descripcion", 4.50, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp h6 = new ProductosApp("Chicken Crunchy", "La opción idónea para los amantes del pollo en la hamburguesa", 7.50, false, "ms-appx:///Assets/hamburguesa1.png");
             UControlProducto uc6 = new UControlProducto(h6);
             uc6.Height = 250;
             uc6.Width = 250;
@@ -80,9 +80,9 @@ namespace Navegacion_prueba
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-        private void irAboutUs1(object sender, PointerRoutedEventArgs e)
+        private void irInicio1(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
 
         public void gridView_ItemClick(object sender, ItemClickEventArgs e)

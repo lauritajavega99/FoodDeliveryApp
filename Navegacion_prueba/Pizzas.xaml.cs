@@ -27,37 +27,37 @@ namespace Navegacion_prueba
 
         public Pizzas()
         {
-            ProductosApp z1 = new ProductosApp("Barbacoa", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z1 = new ProductosApp("Margarita", "Ingredientes: sobre nuestra masa de la casa se incluye tomate, mozzarella y orégano ", 7.50, "ms-appx:///Assets/pizzamargarita.png");
             UControlProducto uc1 = new UControlProducto(z1);
             uc1.Height = 250;
             uc1.Width = 250;
             uc1.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z2 = new ProductosApp("4 quesos", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z2 = new ProductosApp("4 quesos", "Ingredientes: sobre nuestra masa de la casa se incluye 4 quesos importados de diferentes nacionalidades", 9.50, "ms-appx:///Assets/pizza4quesos.png");
             UControlProducto uc2 = new UControlProducto(z2);
             uc2.Height = 250;
             uc2.Width = 250;
             uc2.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z3 = new ProductosApp("Boloñesa", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z3 = new ProductosApp("Cabramelizada", "Ingredientes: sobre nuestra masa de la casa ponemos delicioso quesos de cabra junto con cebolla caramelizada", 9.50, "ms-appx:///Assets/pizzacabramlizada.jpg");
             UControlProducto uc3 = new UControlProducto(z3);
             uc3.Height = 250;
             uc3.Width = 250;
             uc3.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z4 = new ProductosApp("Carbonara", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z4 = new ProductosApp("Carbonara", "Ingredientes: sobre nuestra masa de la casa incluimos una mezcla de nata, champiñones y bacon", 8.50, "ms-appx:///Assets/pizzacarbonara.png");
             UControlProducto uc4 = new UControlProducto(z4);
             uc4.Height = 250;
             uc4.Width = 250;
             uc4.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z5 = new ProductosApp("Kebab", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z5 = new ProductosApp("Barbacoa", "Ingredientes: sobre nuestra masa de la casa incluimos un conjunto de carnes que se compone de bacon, jamon, pollo y por encima salsa de barbacoa", 10.00, "ms-appx:///Assets/pizzaBarbacoa.png");
             UControlProducto uc5 = new UControlProducto(z5);
             uc5.Height = 250;
             uc5.Width = 250;
             uc5.Margin = new Thickness(10, 10, 10, 10);
 
-            ProductosApp z6 = new ProductosApp("Tropical", "descripcion descripcion descripcion", 4.50, "ms-appx:///Assets/pizzas.png");
+            ProductosApp z6 = new ProductosApp("Campiña", "Ingredientes: sobre nuestra masa de la casa incluimos una mezcla de verdura para crear una pizzas más fresca", 8.00, "ms-appx:///Assets/pizzacampina.png");
             UControlProducto uc6 = new UControlProducto(z6);
             uc6.Height = 250;
             uc6.Width = 250;
@@ -79,9 +79,9 @@ namespace Navegacion_prueba
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-        private void irAboutUs3(object sender, PointerRoutedEventArgs e)
+        private void irInicio3(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
 
         private void gridView_ItemClick(object sender, ItemClickEventArgs e)

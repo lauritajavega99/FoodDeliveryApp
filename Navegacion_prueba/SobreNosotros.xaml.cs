@@ -32,9 +32,9 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-        private void irAboutUs8(object sender, PointerRoutedEventArgs e)
+        private void irInicio8(object sender, PointerRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SobreNosotros));
+            this.Frame.Navigate(typeof(Inicio));
         }
     }
 }

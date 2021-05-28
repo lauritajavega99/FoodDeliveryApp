@@ -5,20 +5,20 @@
     xmlns:local="using:Navegacion_prueba"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="360" Width="500">
+    mc:Ignorable="d" Height="392" Width="500">
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="38"/>
-            <RowDefinition Height="47.333"/>
-            <RowDefinition Height="33.333"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="53"/>
+            <RowDefinition Height="29"/>
 
         </Grid.RowDefinitions>
 
-        <Image x:Name="imgProd" HorizontalAlignment="Center" Height="230" VerticalAlignment="Center" Width="230" Source="/Assets/pizzas.png"/>
-        <TextBlock x:Name="txtNombre" Grid.Row="1" Text="Nombre Producto" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Agency FB" FontSize="14" TextAlignment="Center" Margin="166,9,170,15"/>
-        <TextBlock x:Name="txtDescripcion" Grid.Row="2" Text="Descripción" TextWrapping="Wrap" Margin="0,14,0,5" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB"/>
-        <TextBlock x:Name="txtPrecio" Grid.Row="3" Text="Precio" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" Margin="0,6,0,0"/>
+        <Image x:Name="imgProd" HorizontalAlignment="Center" Height="239" VerticalAlignment="Center" Width="243" Source="/Assets/pizzas.png"/>
+        <TextBlock x:Name="txtNombre" Grid.Row="1" Text="Nombre Producto" TextWrapping="Wrap" FontWeight="Bold" FontFamily="Agency FB" FontSize="22" TextAlignment="Center" Margin="166,9,170,10"/>
+        <TextBlock x:Name="txtDescripcion" Grid.Row="2" Text="Descripción" TextWrapping="Wrap" Margin="0,0,0,5" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" FontSize="20"/>
+        <TextBlock x:Name="txtPrecio" Grid.Row="3" Text="Precio" TextWrapping="Wrap" FontWeight="Bold" TextAlignment="Center" FontFamily="Agency FB" FontSize="20" Margin="0,6,0,0"/>
 
 
     </Grid>

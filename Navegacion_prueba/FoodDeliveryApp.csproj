@@ -11,7 +11,7 @@
     <AssemblyName>Navegacion_prueba</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\about.png" />
+    <Content Include="Assets\baconHamburguesa.png" />
     <Content Include="Assets\banner1.png" />
     <Content Include="Assets\banner2.png" />
     <Content Include="Assets\banner3.png" />
@@ -192,6 +193,11 @@
     <Content Include="Assets\girl.png" />
     <Content Include="Assets\hamburguesa1.png" />
     <Content Include="Assets\hamburguesa2.png" />
+    <Content Include="Assets\hamburguesaBacon.png" />
+    <Content Include="Assets\HamburguesaCarnePepino.png" />
+    <Content Include="Assets\hamburguesadobreCarne.png" />
+    <Content Include="Assets\hamburguesamonteVerde.png" />
+    <Content Include="Assets\hamburguesaqueso.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -200,14 +206,32 @@
     <Content Include="Assets\logoApp.png" />
     <Content Include="Assets\menus.png" />
     <Content Include="Assets\ofertas.png" />
+    <Content Include="Assets\pizza4quesos.png" />
+    <Content Include="Assets\pizzaBarbacoa.png" />
+    <Content Include="Assets\pizzacabramlizada.jpg" />
+    <Content Include="Assets\pizzacampina.png" />
+    <Content Include="Assets\pizzacarbonara.png" />
+    <Content Include="Assets\pizzamargarita.png" />
     <Content Include="Assets\pizzas.png" />
     <Content Include="Assets\postres.png" />
+    <Content Include="Assets\postresBrownie.png" />
+    <Content Include="Assets\postresCaramelshake.png" />
+    <Content Include="Assets\postresCookies.png" />
+    <Content Include="Assets\postresHelado.png" />
+    <Content Include="Assets\postresOreoshake.png" />
+    <Content Include="Assets\postresTartaqueso.png" />
     <Content Include="Assets\productos.png" />
     <Content Include="Assets\SmallTile.scale-100.png" />
     <Content Include="Assets\SmallTile.scale-125.png" />
     <Content Include="Assets\SmallTile.scale-150.png" />
     <Content Include="Assets\SmallTile.scale-200.png" />
     <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\snacksBolasquesos.png" />
+    <Content Include="Assets\snacksEnsaladacesar.png" />
+    <Content Include="Assets\snacksFinger.png" />
+    <Content Include="Assets\snacksPatatasfritas.png" />
+    <Content Include="Assets\snacksPatatasgajo.png" />
+    <Content Include="Assets\sncaksNuggets.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-125.png" />
     <Content Include="Assets\SplashScreen.scale-150.png" />

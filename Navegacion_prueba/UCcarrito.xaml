@@ -19,17 +19,19 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="175"/>
             <ColumnDefinition Width="135"/>
-            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="153.333"/>
+            <ColumnDefinition Width="36.667"/>
         </Grid.ColumnDefinitions>
 
         <Image x:Name="imgP" HorizontalAlignment="Center" Height="120" VerticalAlignment="Top" Width="130" Source="/Assets/pizzas.png" Grid.RowSpan="3" Margin="0,18,0,0"/>
-        <TextBlock x:Name="txtTit" Grid.Column="2" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Margin="25,0,0,0"/>
-        <TextBlock x:Name="txtCant" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Margin="25,0,0,0"/>
-        <TextBlock x:Name="txtPrec" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="25,13,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="txtTit" Grid.Column="2" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Margin="25,0,0,0" Height="19" Width="58"/>
+        <TextBlock x:Name="txtCant" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Center" Margin="25,0,0,0" Height="19" Width="58"/>
+        <TextBlock x:Name="txtPrec" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="25,13,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="19" Width="58"/>
 
-        <TextBlock x:Name="txtTit1" Grid.Column="1" HorizontalAlignment="Left" Text="Nombre:" TextWrapping="Wrap" VerticalAlignment="Center" Margin="78,0,0,0" FontWeight="Bold" FontFamily="Agency FB" FontSize="16"/>
-        <TextBlock x:Name="txtCant1" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Text="Cantidad:" TextWrapping="Wrap" VerticalAlignment="Center" Margin="74,0,0,0" FontWeight="Bold" FontFamily="Agency FB" FontSize="16"/>
-        <TextBlock x:Name="txtPrec1" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="86,0,0,0" Text="Precio:" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Agency FB" FontWeight="Bold" FontSize="16"/>
+        <TextBlock x:Name="txtTit1" Grid.Column="1" HorizontalAlignment="Left" Text="Nombre:" TextWrapping="Wrap" VerticalAlignment="Center" Margin="78,0,0,0" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" Height="19" Width="46"/>
+        <TextBlock x:Name="txtCant1" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Text="Cantidad:" TextWrapping="Wrap" VerticalAlignment="Center" Margin="74,0,0,0" FontWeight="Bold" FontFamily="Agency FB" FontSize="16" Height="19" Width="50"/>
+        <TextBlock x:Name="txtPrec1" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="86,0,0,0" Text="Precio:" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Agency FB" FontWeight="Bold" FontSize="16" Height="19" Width="39"/>
+        <Image x:Name="imgCerrar" Grid.Column="3" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="20" Source="/Assets/close.png" Margin="0,5,0,0" PointerPressed="eliminarProducto"/>
 
     </Grid>
 </UserControl>

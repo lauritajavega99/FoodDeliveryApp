@@ -65,5 +65,9 @@ namespace Navegacion_prueba
             set { imgP = value; }
         }
 
+        private void eliminarProducto(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
     }
 }

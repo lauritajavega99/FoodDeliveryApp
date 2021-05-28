@@ -41,6 +41,11 @@ namespace FoodDeliveryApp
             get { return cestaCompra; }
             set { cestaCompra = value; }
         }
+
+        public static void clearList()
+        {
+            cestaCompra.Clear();
+        }
         
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {

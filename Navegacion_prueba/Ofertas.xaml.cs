@@ -27,27 +27,27 @@ namespace FoodDeliveryApp
       
         public Ofertas()
         {
-            ProductosApp m1 = new ProductosApp("B16 Snacks Lovers", "Bolas de queso + patatas deluxe.", 7.00, false, "ms-appx:///Assets/snacksBolasquesos.png");
+            ProductosApp m1 = new ProductosApp("B16 Snacks Lovers", "Bolas de queso + patatas deluxe.", 7.0, false, "ms-appx:///Assets/snacksBolasquesos.png");
             UCofertMenus uc1 = new UCofertMenus(m1);
             uc1.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m2 = new ProductosApp("A32 Sugar Destroyers", "Helado + cookies de chocolate.", 6.00, false, "ms-appx:///Assets/postresHelado.png");
+            ProductosApp m2 = new ProductosApp("A32 Sugar Destroyers", "Helado + cookies de chocolate.", 6.0, false, "ms-appx:///Assets/postresHelado.png");
             UCofertMenus uc2 = new UCofertMenus(m2);
             uc2.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m3 = new ProductosApp("C3 Chicken Crunchyx2", "2 Chicken Crunchy", 13.00, false, "ms-appx:///Assets/hamburguesa1.png");
+            ProductosApp m3 = new ProductosApp("C3 Chicken Crunchyx2", "2 Chicken Crunchy", 13.0, false, "ms-appx:///Assets/hamburguesa1.png");
             UCofertMenus uc3 = new UCofertMenus(m3);
             uc3.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m4 = new ProductosApp("B12 Pizza Lovers", "Pizza Campina + pizza cabramelizada", 12.00, false, "ms-appx:///Assets/pizzacampina.png");
+            ProductosApp m4 = new ProductosApp("B12 Pizza Lovers", "Pizza Campina + pizza cabramelizada.", 12.0, false, "ms-appx:///Assets/pizzacampina.png");
             UCofertMenus uc4 = new UCofertMenus(m4);
             uc4.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m5 = new ProductosApp("A42 Oferta del día", "Finger de queso", 2.00, false, "ms-appx:///Assets/snacksFinger.png");
+            ProductosApp m5 = new ProductosApp("A42 Oferta del día", "Fingers de queso", 2.0, false, "ms-appx:///Assets/snacksFinger.png");
             UCofertMenus uc5 = new UCofertMenus(m5);
             uc5.Margin = new Thickness(0, 10, 0, 10);
 
-            ProductosApp m6 = new ProductosApp("Z18 Completito", "Imperial + patatas deluxe", 11.00, false, "ms-appx:///Assets/hamburguesadobreCarne.png");
+            ProductosApp m6 = new ProductosApp("Z18 Completito", "Imperial + patatas deluxe.", 11.0, false, "ms-appx:///Assets/hamburguesadobreCarne.png");
             UCofertMenus uc6 = new UCofertMenus(m6);
             uc6.Margin = new Thickness(0, 10, 0, 10);
 

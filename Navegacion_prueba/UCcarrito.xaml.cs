@@ -1,4 +1,5 @@
-﻿using FoodDeliveryApp.Models;
+﻿using FoodDeliveryApp;
+using FoodDeliveryApp.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -67,7 +68,13 @@ namespace Navegacion_prueba
 
         private void eliminarProducto(object sender, PointerRoutedEventArgs e)
         {
+            MainPage.Carrito.Remove(producto);
+            MainPage.sumaCompra();
 
+            if (MainPage.Carrito.Count == 0)
+            {
+                MainPage.Total = 0;
+            }
         }
     }
 }

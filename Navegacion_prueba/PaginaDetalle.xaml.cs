@@ -68,6 +68,7 @@ namespace Navegacion_prueba
                 producto.Add = true;
                 aniadido = true;
                 MainPage.Carrito.Add(this.producto);
+                MainPage.sumaCompra();
             }
             else
             {

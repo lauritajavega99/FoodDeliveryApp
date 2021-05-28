@@ -41,7 +41,7 @@
                 <RowDefinition Height="61"/>
                 <RowDefinition Height="65"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="txtTotal"  Grid.Row="0" Text="Total:" FontSize="24" Margin="6,6,6,0"  FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Top" Height="28"/>
+            <TextBlock x:Name="txtTotal"  Grid.Row="0" Text="Total: 0.0 euros." FontSize="24" Margin="6,6,6,0"  FontWeight="Bold" FontFamily="Agency FB" VerticalAlignment="Top" Height="28"/>
             <Button x:Name="btnLimpiarGrid" Content="Limpiar Lista" Margin="5" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Agency FB" FontSize="18" Background="#F2C63848" Width="140" Height="40" Click="limpiarCesta" />
             <Button x:Name="btnPagar" Content="Pagar" Margin="0,0,5,22" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontWeight="Bold" FontFamily="Agency FB" FontSize="18" Background="#F2C63848" Width="140" Height="39" Click="Pagar"/>
 

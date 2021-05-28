@@ -25,7 +25,7 @@ namespace FoodDeliveryApp
     public sealed partial class CestaCompra : Page
     {
         private UCcarrito uc1;
-
+        
         public CestaCompra()
         {
             this.InitializeComponent();
@@ -39,6 +39,8 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
+
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             listView.Items.Clear();
@@ -47,8 +49,18 @@ namespace FoodDeliveryApp
                 uc1 = new UCcarrito(MainPage.Carrito.ElementAt(i));
                 uc1.Margin = new Thickness(0, 10, 0, 10);
                 uc1.Added = true;
-                sumaCompra(MainPage.Carrito.ElementAt(i).Precio);
                 listView.Items.Add(uc1);
+                MainPage.sumaCompra();
+                
+            }
+
+            if (MainPage.Carrito.Count == 0)
+            {
+                txtTotal.Text = "Total: 0.0 euros.";
+            }
+            else
+            {
+                txtTotal.Text = "Total: " + MainPage.Total + " euros.";
             }
         }
 
@@ -57,7 +69,7 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(Inicio));
         }
 
-        private void sumaCompra(double p)
+       /* private void sumaCompra(double p)
         {
             double total = 0.0;
 
@@ -66,7 +78,7 @@ namespace FoodDeliveryApp
                 total += p;
                 txtTotal.Text = "Total: " + total + " euros.";
             }
-        }
+        }*/
 
 
         private void Pagar(object sender, RoutedEventArgs e)
@@ -92,7 +104,7 @@ namespace FoodDeliveryApp
         {
             listView.Items.Clear();
             MainPage.clearList();
-            txtTotal.Text = "Total: ";
+            txtTotal.Text = "Total: 0.0 euros.";
         }
     }
 

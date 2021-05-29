@@ -29,7 +29,7 @@ namespace Navegacion_prueba
             this.InitializeComponent();
             this.producto = pro;
             this.txtTit.Text = pro.Nombre;
-            this.txtCant.Text = Convert.ToString(pro.Cantidad);
+            this.txtCant.Text = "1";
             this.txtPrec.Text = Convert.ToString(pro.Precio);
             this.imgP.Source = pro.Imagen.Source;
             this.aniadido = pro.Add;

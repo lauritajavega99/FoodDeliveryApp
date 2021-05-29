@@ -12,8 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Windows.Devices.Geolocation;
-using Windows.UI.Xaml.Controls.Maps;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,32 +25,16 @@ namespace FoodDeliveryApp
         public Contacto()
         {
             this.InitializeComponent();
-            MapControl1.Loaded += MapControl1_Loaded;
         }
 
-        private async void MapControl1_Loaded(object sender, RoutedEventArgs e)
-        {
-
-            var center =
-                new Geopoint(new BasicGeoposition()
-                {
-                    Latitude = 38.9861,
-                    Longitude = -3.92726
-
-                });
-
-            await MapControl1.TrySetSceneAsync(MapScene.CreateFromLocationAndRadius(center, 3000));
-        }
-
-        private void irCesta7(object sender, PointerRoutedEventArgs e)
+        private void irCesta8(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(CestaCompra));
         }
 
-        private void irInicio7(object sender, PointerRoutedEventArgs e)
+        private void irInicio8(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Inicio));
         }
     }
 }
-

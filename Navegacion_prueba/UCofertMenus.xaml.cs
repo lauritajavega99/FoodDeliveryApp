@@ -33,6 +33,7 @@ namespace Navegacion_prueba
             this.txtPrec.Text = Convert.ToString(pro.Precio) + "€";
             this.imgP.Source = pro.Imagen.Source;
             this.aniadido = pro.Add;
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += UCofertMenus_VisibleBoundsChanged;
         }
 
         public String Nombretxt
@@ -86,6 +87,22 @@ namespace Navegacion_prueba
                 }
             }
             
+        }
+
+        private void UCofertMenus_VisibleBoundsChanged(Windows.UI.ViewManagement.ApplicationView sender, object args)
+        {
+            var width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
+
+            if (width <= 360)
+            {
+                RelativePanel.SetBelow(txtTit, null);
+                RelativePanel.SetRightOf(txtTit, imgP);
+            }
+            else
+            {
+                RelativePanel.SetRightOf(txtTit, null);
+                RelativePanel.SetBelow(txtTit, imgP);
+            }
         }
     }
 }

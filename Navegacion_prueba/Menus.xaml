@@ -22,9 +22,7 @@
             <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
 
-        <ListView x:Name="listView" Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsItemClickEnabled="True" Padding="0,10,0,0">
-            
-        </ListView>
+        <ListView x:Name="listView" Background="#FFDBDBDB" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsItemClickEnabled="True" Padding="0,10,0,0"/>
 
         <Viewbox x:Name="vbMenus" Grid.Row="0" Grid.Column="1" Width="300">
             <TextBlock x:Name="txtMenus" Text="Carta de Menús" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>

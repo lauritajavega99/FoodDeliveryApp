@@ -122,8 +122,8 @@
     <Compile Include="CestaCompra.xaml.cs">
       <DependentUpon>CestaCompra.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Contacto.xaml.cs">
-      <DependentUpon>Contacto.xaml</DependentUpon>
+    <Compile Include="SobreNosotros.xaml.cs">
+      <DependentUpon>SobreNosotros.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entrantes.xaml.cs">
       <DependentUpon>Entrantes.xaml</DependentUpon>
@@ -157,8 +157,8 @@
       <DependentUpon>Productos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SobreNosotros.xaml.cs">
-      <DependentUpon>SobreNosotros.xaml</DependentUpon>
+    <Compile Include="Contacto.xaml.cs">
+      <DependentUpon>Contacto.xaml</DependentUpon>
     </Compile>
     <Compile Include="UCcarrito.xaml.cs">
       <DependentUpon>UCcarrito.xaml</DependentUpon>
@@ -205,6 +205,12 @@
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="Assets\logoApp.png" />
+    <Content Include="Assets\menu2Hamburguesas.png" />
+    <Content Include="Assets\menuBacon.png" />
+    <Content Include="Assets\menuBigDobleCarne.png" />
+    <Content Include="Assets\menucampina.png" />
+    <Content Include="Assets\menuCrispy.png" />
+    <Content Include="Assets\menuDuoCabramelizada.png" />
     <Content Include="Assets\menus.png" />
     <Content Include="Assets\ofertas.png" />
     <Content Include="Assets\pizza4quesos.png" />
@@ -286,7 +292,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Contacto.xaml">
+    <Page Include="SobreNosotros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -330,7 +336,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SobreNosotros.xaml">
+    <Page Include="Contacto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

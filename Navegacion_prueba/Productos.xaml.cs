@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using FoodDeliveryApp.Models;
 using Navegacion_prueba;
+using Windows.UI.Xaml.Media.Animation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -61,6 +62,12 @@ namespace FoodDeliveryApp
         private void irPostres(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Postres));
+        }
+
+        private void animacionGiro(object sender, PointerRoutedEventArgs e)
+        {
+            Storyboard sbaux = (Storyboard)this.Resources["Storyboard1"];
+            sbaux.Begin();
         }
     }
 }

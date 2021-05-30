@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using FoodDeliveryApp.Models;
 using FoodDeliveryApp;
 using Newtonsoft.Json;
+using Windows.UI.Xaml.Media.Animation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -92,6 +93,13 @@ namespace Navegacion_prueba
             var producto = (UControlProducto) e.ClickedItem;
 
             Frame.Navigate(typeof(PaginaDetalle), producto);
+        }
+
+        private void animacionLogo(object sender, PointerRoutedEventArgs e)
+        {
+
+            Storyboard sbaux = (Storyboard)this.Resources["giroLogo3"];
+            sbaux.Begin();
         }
     }
 }

@@ -8,8 +8,13 @@
     xmlns:data ="using:FoodDeliveryApp.Models"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="giroLogo6">
+            <DoubleAnimation Duration="00:00:00.4000000" Storyboard.TargetName="imgLogo" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" To="360"/>
+        </Storyboard>
+    </Page.Resources>
 
- 
+
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -38,6 +43,10 @@
 
         <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="2" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta8" />
         <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
-        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irInicio8" Width="100" />
+        <Image x:Name="imgLogo" Grid.Row="0" Grid.Column="0" Margin="7" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irInicio8" Width="100" PointerMoved="animacionGiro" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <CompositeTransform/>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Page>

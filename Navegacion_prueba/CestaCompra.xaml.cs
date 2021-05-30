@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -25,7 +26,7 @@ namespace FoodDeliveryApp
     public sealed partial class CestaCompra : Page
     {
         private UCcarrito uc1;
-        
+
         public CestaCompra()
         {
             this.InitializeComponent();
@@ -44,14 +45,14 @@ namespace FoodDeliveryApp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             listView.Items.Clear();
-            for(int i = 0; i<MainPage.Carrito.Count; i++)
+            for (int i = 0; i < MainPage.Carrito.Count; i++)
             {
                 uc1 = new UCcarrito(MainPage.Carrito.ElementAt(i));
                 uc1.Margin = new Thickness(0, 10, 0, 10);
                 uc1.Added = true;
                 listView.Items.Add(uc1);
                 MainPage.sumaCompra();
-                
+
             }
 
             if (MainPage.Carrito.Count == 0)
@@ -69,35 +70,57 @@ namespace FoodDeliveryApp
             this.Frame.Navigate(typeof(Inicio));
         }
 
-       /* private void sumaCompra(double p)
-        {
-            double total = 0.0;
+        /* private void sumaCompra(double p)
+         {
+             double total = 0.0;
 
-            for (int i = 0; i < MainPage.Carrito.Count; i++)
+             for (int i = 0; i < MainPage.Carrito.Count; i++)
+             {
+                 total += p;
+                 txtTotal.Text = "Total: " + total + " euros.";
+             }
+         }*/
+
+
+        private void Pagar(object sender, RoutedEventArgs e) {
+
+            if (MainPage.Carrito.Count == 0)
             {
-                total += p;
-                txtTotal.Text = "Total: " + total + " euros.";
+                DisplayNoPagoDialog();
             }
-        }*/
-
-
-        private void Pagar(object sender, RoutedEventArgs e)
-        {
-            DisplayNoWifiDialog();
+            else
+            {
+                DisplayPagoDialog();
+            }
+            
         }
 
-        private async void DisplayNoWifiDialog()
+        private async void DisplayPagoDialog()
         {
-            ContentDialog noWifiDialog = new ContentDialog
+            ContentDialog PagoDialog = new ContentDialog
             {
                 Title = "Pago realizado",
                 Content = "¡Su compra ha sido realizada con éxito!",
                 CloseButtonText = "Ok"
             };
 
-            ContentDialogResult result = await noWifiDialog.ShowAsync();
+            ContentDialogResult result = await PagoDialog.ShowAsync();
             listView.Items.Clear();
+            MainPage.clearList();
             txtTotal.Text = "Total: ";
+        }
+
+        private async void DisplayNoPagoDialog()
+        {
+            ContentDialog noPagoDialog = new ContentDialog
+            {
+                Title = "Carrito vacío",
+                Content = "¡Ups! Parece que no hay nada en la cesta.",
+                CloseButtonText = "Ok"
+            };
+
+            ContentDialogResult result = await noPagoDialog.ShowAsync();
+            
         }
 
         private void limpiarCesta(object sender, RoutedEventArgs e)
@@ -105,6 +128,13 @@ namespace FoodDeliveryApp
             listView.Items.Clear();
             MainPage.clearList();
             txtTotal.Text = "Total: 0.0 euros.";
+        }
+
+        private void animacionGiro(object sender, PointerRoutedEventArgs e)
+        {
+
+            Storyboard sbaux = (Storyboard)this.Resources["giroLogo0"];
+            sbaux.Begin();
         }
     }
 

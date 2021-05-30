@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -88,6 +89,13 @@ namespace Navegacion_prueba
             var producto = (UControlProducto)e.ClickedItem;
 
             Frame.Navigate(typeof(PaginaDetalle), producto);
+        }
+
+        private void animacionGiro(object sender, PointerRoutedEventArgs e)
+        {
+
+            Storyboard sbaux = (Storyboard)this.Resources["giroLogo2"];
+            sbaux.Begin();
         }
     }
 }

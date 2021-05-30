@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using FoodDeliveryApp.Models;
 using FoodDeliveryApp;
 using Navegacion_prueba;
+using Windows.UI.Xaml.Media.Animation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -71,6 +72,13 @@ namespace FoodDeliveryApp
         private void irInicio5(object sender, PointerRoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Inicio));
+        }
+
+        private void animacionGiro(object sender, PointerRoutedEventArgs e)
+        {
+
+            Storyboard sbaux = (Storyboard)this.Resources["giroLogo5"];
+            sbaux.Begin();
         }
     }
 }

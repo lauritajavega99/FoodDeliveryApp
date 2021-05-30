@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
@@ -85,6 +86,13 @@ namespace Navegacion_prueba
 
             
 
+        }
+
+        private void animacionGiro(object sender, PointerRoutedEventArgs e)
+        {
+
+            Storyboard sbaux = (Storyboard)this.Resources["giroLogo7"];
+            sbaux.Begin();
         }
     }
 }

@@ -9,6 +9,11 @@
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="giroLogo4">
+            <DoubleAnimation Duration="00:00:00.4000000" Storyboard.TargetName="imgLogo" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" To="360"/>
+        </Storyboard>
+    </Page.Resources>
 
     <Grid Background="White" FocusVisualPrimaryBrush="#FFE4D5D5">
         <Grid.ColumnDefinitions>
@@ -19,25 +24,29 @@
             <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="63*"/>
-            <RowDefinition Height="325*"/>
-            <RowDefinition Height="112*"/>
+            <RowDefinition Height="126*"/>
+            <RowDefinition Height="681"/>
+            <RowDefinition Height="193"/>
         </Grid.RowDefinitions>
-        <FlipView x:Name="fVslider"  Margin="45,0,0,0" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Height="600" Grid.ColumnSpan="3">
+        <FlipView x:Name="fVslider"  Margin="100,25,0,55" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="600" Grid.ColumnSpan="3">
             <Image Source="/Assets/banner1.png" AutomationProperties.Name="Cliff" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <Image Source="/Assets/banner2.png" AutomationProperties.Name="Grapes" Stretch="UniformToFill"/>
-            <Image Source="/Assets/banner3.png" AutomationProperties.Name="Rainier" Stretch="UniformToFill"/>
+            <Image Source="/Assets/banner2.png" AutomationProperties.Name="Grapes" Stretch="Uniform"/>
+            <Image Source="/Assets/banner3.png" AutomationProperties.Name="Rainier" Stretch="Uniform"/>
         </FlipView>
 
         <Image x:Name="imgCarro" Grid.Row="0" Grid.Column="3" Margin="20,6,20,0" Source="/Assets/carro.png" VerticalAlignment="Top" Height="40" PointerPressed="irCesta" />
         <Image x:Name="imgBuscar" Grid.Row="0" Grid.Column="4" Margin="20,6,20,0" Source="/Assets/buscar.png" VerticalAlignment="Top" Height="40" />
-        <Image x:Name="imgLogo" Margin="7" Grid.Row="0" Grid.Column="0" Source="/Assets/logoApp.png" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Left" PointerPressed="irInicio" Width="100" />
+        <Image x:Name="imgLogo" Margin="7,13,0,13" Grid.Row="0" Grid.Column="0" Source="/Assets/logoApp.png" Height="100" HorizontalAlignment="Left" PointerPressed="irInicio" Width="100" PointerMoved="animacionGiro" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <CompositeTransform/>
+            </Image.RenderTransform>
+        </Image>
 
-        <Button x:Name="btnCarta" Grid.Row="2" Grid.Column="0" Content="Carta productos" HorizontalAlignment="Right" Margin="0,4,4,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" FocusVisualPrimaryBrush="#FFC63848" Background="#FFC63848" Click="ClickbtnProductos" />
-        <Button x:Name="btnMenus" Grid.Row="2" Grid.Column="1" Content="Menús" HorizontalAlignment="Center" Margin="0,4,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnMenus" />
-        <Button x:Name="btnOfertas" Grid.Row="2" Grid.Column="2" Content="Ofertas destacadas" Margin="4,4,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnOfertas" />
+        <Button x:Name="btnCarta" Grid.Row="2" Grid.Column="0" Content="Carta productos" HorizontalAlignment="Right" Margin="0,0,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" FocusVisualPrimaryBrush="#FFC63848" Background="#FFC63848" Click="ClickbtnProductos" Grid.RowSpan="2" />
+        <Button x:Name="btnMenus" Grid.Row="2" Grid.Column="1" Content="Menús" HorizontalAlignment="Center" Margin="0,0,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnMenus" Grid.RowSpan="2" />
+        <Button x:Name="btnOfertas" Grid.Row="2" Grid.Column="2" Content="Ofertas destacadas" Margin="4,0,0,0" FontWeight="Bold" FontSize="18" FontFamily="Agency FB" VerticalAlignment="Top" Width="140" Height="40" Background="#FFC63848" Click="ClickbtnOfertas" Grid.RowSpan="2" />
 
-        <Viewbox x:Name="vbBienvenido" Grid.Row="0" Grid.Column="1" Width="300">
+        <Viewbox x:Name="vbBienvenido" Grid.Row="0" Grid.Column="1" Width="300" Margin="0">
             <TextBlock x:Name="txtBienvenido" Text="¡Bienvenidos!" FontSize="18" Margin="6" Grid.Row="1" Grid.Column="1" FontWeight="Bold" FontFamily="Agency FB"/>
         </Viewbox>
 
